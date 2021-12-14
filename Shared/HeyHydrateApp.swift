@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Hey__Hydrate_App: App {
+struct HeyHydrateApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var percentageDrank: Int = 0
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Spacer()
+            /// The water drank indicator
+            WaterDrankIdicatorView(percentageDrank: $percentageDrank)
+            Spacer()
+            /// Add more water drank
+            AddWaterDrankView(percentageDrank: $percentageDrank)
+            Spacer()
+        }
     }
 }
 

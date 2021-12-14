@@ -11,12 +11,14 @@
 		78E239BA2768F2FD0058EE36 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239B92768F2FD0058EE36 /* Tests_iOSLaunchTests.swift */; };
 		78E239C42768F2FD0058EE36 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239C32768F2FD0058EE36 /* Tests_macOS.swift */; };
 		78E239C62768F2FD0058EE36 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239C52768F2FD0058EE36 /* Tests_macOSLaunchTests.swift */; };
-		78E239C72768F2FD0058EE36 /* Hey__Hydrate_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2399F2768F2FC0058EE36 /* Hey__Hydrate_App.swift */; };
-		78E239C82768F2FD0058EE36 /* Hey__Hydrate_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2399F2768F2FC0058EE36 /* Hey__Hydrate_App.swift */; };
+		78E239C72768F2FD0058EE36 /* HeyHydrateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2399F2768F2FC0058EE36 /* HeyHydrateApp.swift */; };
+		78E239C82768F2FD0058EE36 /* HeyHydrateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2399F2768F2FC0058EE36 /* HeyHydrateApp.swift */; };
 		78E239C92768F2FD0058EE36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239A02768F2FC0058EE36 /* ContentView.swift */; };
 		78E239CA2768F2FD0058EE36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239A02768F2FC0058EE36 /* ContentView.swift */; };
 		78E239CB2768F2FD0058EE36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E239A12768F2FD0058EE36 /* Assets.xcassets */; };
 		78E239CC2768F2FD0058EE36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E239A12768F2FD0058EE36 /* Assets.xcassets */; };
+		78E239DD2768F3EB0058EE36 /* WaterDrankIdicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239DC2768F3EB0058EE36 /* WaterDrankIdicatorView.swift */; };
+		78E239E02768F4200058EE36 /* AddWaterDrankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239DF2768F4200058EE36 /* AddWaterDrankView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		78E2399F2768F2FC0058EE36 /* Hey__Hydrate_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hey__Hydrate_App.swift; sourceTree = "<group>"; };
+		78E2399F2768F2FC0058EE36 /* HeyHydrateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyHydrateApp.swift; sourceTree = "<group>"; };
 		78E239A02768F2FC0058EE36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		78E239A12768F2FD0058EE36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78E239A62768F2FD0058EE36 /* Hey! Hydrate!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hey! Hydrate!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +51,8 @@
 		78E239BF2768F2FD0058EE36 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E239C32768F2FD0058EE36 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		78E239C52768F2FD0058EE36 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		78E239DC2768F3EB0058EE36 /* WaterDrankIdicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDrankIdicatorView.swift; sourceTree = "<group>"; };
+		78E239DF2768F4200058EE36 /* AddWaterDrankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWaterDrankView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +101,11 @@
 		78E2399E2768F2FC0058EE36 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				78E2399F2768F2FC0058EE36 /* Hey__Hydrate_App.swift */,
-				78E239A02768F2FC0058EE36 /* ContentView.swift */,
 				78E239A12768F2FD0058EE36 /* Assets.xcassets */,
+				78E2399F2768F2FC0058EE36 /* HeyHydrateApp.swift */,
+				78E239A02768F2FC0058EE36 /* ContentView.swift */,
+				78E239DE2768F4060058EE36 /* AddWaterDrank */,
+				78E239DB2768F3C00058EE36 /* WaterDrankIndicator */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -139,6 +145,22 @@
 				78E239C52768F2FD0058EE36 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		78E239DB2768F3C00058EE36 /* WaterDrankIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				78E239DC2768F3EB0058EE36 /* WaterDrankIdicatorView.swift */,
+			);
+			path = WaterDrankIndicator;
+			sourceTree = "<group>";
+		};
+		78E239DE2768F4060058EE36 /* AddWaterDrank */ = {
+			isa = PBXGroup;
+			children = (
+				78E239DF2768F4200058EE36 /* AddWaterDrankView.swift */,
+			);
+			path = AddWaterDrank;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,7 +322,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				78E239C92768F2FD0058EE36 /* ContentView.swift in Sources */,
-				78E239C72768F2FD0058EE36 /* Hey__Hydrate_App.swift in Sources */,
+				78E239E02768F4200058EE36 /* AddWaterDrankView.swift in Sources */,
+				78E239DD2768F3EB0058EE36 /* WaterDrankIdicatorView.swift in Sources */,
+				78E239C72768F2FD0058EE36 /* HeyHydrateApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78E239CA2768F2FD0058EE36 /* ContentView.swift in Sources */,
-				78E239C82768F2FD0058EE36 /* Hey__Hydrate_App.swift in Sources */,
+				78E239C82768F2FD0058EE36 /* HeyHydrateApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +495,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
@@ -479,12 +504,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Hey--Hydrate-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate;
 				PRODUCT_NAME = "Hey! Hydrate!";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -501,6 +526,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
@@ -509,12 +535,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Hey--Hydrate-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate;
 				PRODUCT_NAME = "Hey! Hydrate!";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
