@@ -14,6 +14,7 @@ struct ContentView: View {
     @State private var showPopover: Bool = false
     var body: some View {
         VStack {
+                
             HStack {
                 Button {
                     waterDrank = 0
