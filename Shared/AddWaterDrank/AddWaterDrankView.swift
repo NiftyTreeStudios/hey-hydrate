@@ -24,7 +24,19 @@ struct AddWaterDrankView: View {
                 } label: {
                     Image(systemName: "minus")
                 }
-                Text("\(cupSize)")
+                Picker("\(cupSize)", selection: $cupSize) {
+                    ForEach(0 ..< 5001) { size in
+                        if size <= 500 && (size % 10) == 0 {
+                            Text("\(size)")
+                        } else if size <= 1000 && (size % 50) == 0 {
+                            Text("\(size)")
+                        } else if size <= 2500 && (size % 100) == 0 {
+                            Text("\(size)")
+                        } else if (size % 250) == 0 {
+                            Text("\(size)")
+                        }
+                    }
+                }.pickerStyle(.inline)
                 Button {
                     cupSize += 50
                 } label: {
