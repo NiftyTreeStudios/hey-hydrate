@@ -11,6 +11,7 @@ import HealthKit
 final class HealthKitHelper: ObservableObject {
 
     @Published var waterAmount: Int = 0
+    @Published var alertItem: AlertItem?
 
     let healthStore = HKHealthStore()
 
@@ -22,7 +23,7 @@ final class HealthKitHelper: ObservableObject {
         // Requests permission to save and read the specified data types.
         healthStore.requestAuthorization(toShare: healthKitTypes, read: healthKitTypes) { ( success, error ) in
             if error != nil {
-                print(error)
+                self.alertItem = AlertContext.unableToAccessHealthKit
             }
             if success {
                 // Query water consumed
@@ -53,13 +54,11 @@ final class HealthKitHelper: ObservableObject {
         query.initialResultsHandler = { _, result, error in
             var resultCount = 0.0
             if error != nil {
-                print(error)
+                self.alertItem = AlertContext.unableToGetHealthRecords
             }
             result!.enumerateStatistics(from: startOfDay, to: now) { statistics, _ in
                 if let sum = statistics.sumQuantity() {
-                    print("Statistics sumquantity: \(sum)")
                     resultCount = sum.doubleValue(for: HKUnit.liter())
-                    print("Result count: \(resultCount)")
                 }
                 DispatchQueue.main.async {
                     completion(Int(resultCount * 1000))
@@ -69,7 +68,7 @@ final class HealthKitHelper: ObservableObject {
 
         query.statisticsUpdateHandler = { _, statistics, _, error in
             if error != nil {
-                print(error)
+                self.alertItem = AlertContext.unableToGetHealthRecords
             }
             if let sum = statistics?.sumQuantity() {
                 let resultCount = sum.doubleValue(for: HKUnit.liter())
@@ -96,7 +95,7 @@ final class HealthKitHelper: ObservableObject {
         print("Water amount to save: \(waterAmountToSave)")
         healthStore.save(waterAmountToSave) { success, error in
             if error != nil {
-                print(error)
+                self.alertItem = AlertContext.unableToUpdateHealthRecords
             }
             if success {
                 print("Update worked!")

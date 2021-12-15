@@ -15,6 +15,8 @@
 		78CC90E9276A40010033CC9C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CC90E8276A40010033CC9C /* HealthKit.framework */; };
 		78CC90EB276A42260033CC9C /* HealthKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90EA276A42260033CC9C /* HealthKitHelper.swift */; };
 		78CC90EC276A42260033CC9C /* HealthKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90EA276A42260033CC9C /* HealthKitHelper.swift */; };
+		78CC90EF276A5ADB0033CC9C /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90EE276A5ADB0033CC9C /* AlertItem.swift */; };
+		78CC90F1276A5AF20033CC9C /* AlertContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90F0276A5AF20033CC9C /* AlertContext.swift */; };
 		78E239B82768F2FD0058EE36 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239B72768F2FD0058EE36 /* Tests_iOS.swift */; };
 		78E239BA2768F2FD0058EE36 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239B92768F2FD0058EE36 /* Tests_iOSLaunchTests.swift */; };
 		78E239C42768F2FD0058EE36 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239C32768F2FD0058EE36 /* Tests_macOS.swift */; };
@@ -56,6 +58,8 @@
 		78CC90E7276A40010033CC9C /* Hey! Hydrate! (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hey! Hydrate! (iOS).entitlements"; sourceTree = "<group>"; };
 		78CC90E8276A40010033CC9C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		78CC90EA276A42260033CC9C /* HealthKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitHelper.swift; sourceTree = "<group>"; };
+		78CC90EE276A5ADB0033CC9C /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
+		78CC90F0276A5AF20033CC9C /* AlertContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContext.swift; sourceTree = "<group>"; };
 		78E2399F2768F2FC0058EE36 /* HeyHydrateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyHydrateApp.swift; sourceTree = "<group>"; };
 		78E239A02768F2FC0058EE36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		78E239A12768F2FD0058EE36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 		788425852769ECAF0085660E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				78CC90ED276A5AC90033CC9C /* Alerts */,
 				788425862769ECC20085660E /* Utilities.swift */,
 				78CC90EA276A42260033CC9C /* HealthKitHelper.swift */,
 			);
@@ -137,6 +142,15 @@
 				78CC90E5276A38880033CC9C /* CupSizeSheet.swift */,
 			);
 			path = Sheets;
+			sourceTree = "<group>";
+		};
+		78CC90ED276A5AC90033CC9C /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				78CC90EE276A5ADB0033CC9C /* AlertItem.swift */,
+				78CC90F0276A5AF20033CC9C /* AlertContext.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		78E239992768F2FB0058EE36 = {
@@ -456,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78CC90F1276A5AF20033CC9C /* AlertContext.swift in Sources */,
 				788425872769ECC20085660E /* Utilities.swift in Sources */,
 				78CC90E6276A38880033CC9C /* CupSizeSheet.swift in Sources */,
 				78E239C92768F2FD0058EE36 /* ContentView.swift in Sources */,
@@ -463,6 +478,7 @@
 				78E239DD2768F3EB0058EE36 /* WaterDrankIdicatorView.swift in Sources */,
 				78CC90E4276A387B0033CC9C /* DailyGoalSheet.swift in Sources */,
 				78CC90EB276A42260033CC9C /* HealthKitHelper.swift in Sources */,
+				78CC90EF276A5ADB0033CC9C /* AlertItem.swift in Sources */,
 				78E239C72768F2FD0058EE36 /* HeyHydrateApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

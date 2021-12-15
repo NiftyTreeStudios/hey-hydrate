@@ -14,7 +14,7 @@ struct AddWaterDrankView: View {
     @State private var cupSize: Int = 200
     @State private var pickCupSheetShown: Bool = false
 
-    let hkHelper: HealthKitHelper
+    @EnvironmentObject var hkHelper: HealthKitHelper
 
     var body: some View {
         VStack {
@@ -60,8 +60,7 @@ struct AddWaterDrankView_Previews: PreviewProvider {
         AddWaterDrankView(
             percentageDrank: .constant(30),
             waterDrank: .constant(500),
-            goal: .constant(2000),
-            hkHelper: HealthKitHelper()
+            goal: .constant(2000)
         )
     }
 }
