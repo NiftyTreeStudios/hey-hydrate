@@ -9,10 +9,8 @@ import SwiftUI
 import HealthKit
 
 struct ContentView: View {
-    @State private var percentageDrank: Double = 0
-    @AppStorage("goal") private var goal: Int = 2000
-    @State private var showPopover: Bool = false
 
+    @StateObject private var viewModel = ContentViewModel()
     @EnvironmentObject var hkHelper: HealthKitHelper
 
     var body: some View {
@@ -20,38 +18,42 @@ struct ContentView: View {
             HStack {
                 Spacer()
                 Button {
-                    self.showPopover = true
+                    self.viewModel.showPopover = true
                 } label: {
                     Image(systemName: "flag")
                 }
                 .padding()
-                .sheet(isPresented: $showPopover, onDismiss: {
-                    percentageDrank = calculatePercentageDrank(waterDrank: hkHelper.waterAmount, goal: goal)
-                }) { // swiftlint:disable:this multiple_closures_with_trailing_closure
-                    DailyGoalSheet(goal: $goal, isPresented: $showPopover)
+                .sheet(
+                    isPresented: $viewModel.showPopover,
+                    onDismiss: {
+                        viewModel.percentageDrank = calculatePercentageDrank(
+                            waterDrank: hkHelper.waterAmount,
+                            goal: viewModel.goal
+                        )
+                    }) { // swiftlint:disable:this multiple_closures_with_trailing_closure
+                    DailyGoalSheet(goal: $viewModel.goal, isPresented: $viewModel.showPopover)
                 }
 
             }
             Spacer()
             // The water drank indicator
-            WaterDrankIdicatorView(percentageDrank: $percentageDrank, goal: $goal, waterDrank: $hkHelper.waterAmount)
+            WaterDrankIdicatorView(
+                percentageDrank: $viewModel.percentageDrank,
+                goal: $viewModel.goal,
+                waterDrank: $hkHelper.waterAmount
+            )
             Spacer()
             // Add more water drank
             AddWaterDrankView(
-                percentageDrank: $percentageDrank,
+                percentageDrank: $viewModel.percentageDrank,
                 waterDrank: $hkHelper.waterAmount,
-                goal: $goal
+                goal: $viewModel.goal
             )
             Spacer()
         }
         .onAppear {
             hkHelper.autorizeHealthKit()
-            percentageDrank = calculatePercentageDrank(waterDrank: hkHelper.waterAmount, goal: goal)
-        }
-        .task {
-            hkHelper.getWater { result in
-                hkHelper.waterAmount = result
-            }
+            viewModel.percentageDrank = calculatePercentageDrank(waterDrank: hkHelper.waterAmount, goal: viewModel.goal)
         }
         .alert(item: $hkHelper.alertItem, content: { alertItem in
             Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)

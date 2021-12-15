@@ -17,6 +17,7 @@
 		78CC90EC276A42260033CC9C /* HealthKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90EA276A42260033CC9C /* HealthKitHelper.swift */; };
 		78CC90EF276A5ADB0033CC9C /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90EE276A5ADB0033CC9C /* AlertItem.swift */; };
 		78CC90F1276A5AF20033CC9C /* AlertContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90F0276A5AF20033CC9C /* AlertContext.swift */; };
+		78CC90F8276A70410033CC9C /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90F7276A70410033CC9C /* ContentViewModel.swift */; };
 		78E239B82768F2FD0058EE36 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239B72768F2FD0058EE36 /* Tests_iOS.swift */; };
 		78E239BA2768F2FD0058EE36 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239B92768F2FD0058EE36 /* Tests_iOSLaunchTests.swift */; };
 		78E239C42768F2FD0058EE36 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239C32768F2FD0058EE36 /* Tests_macOS.swift */; };
@@ -60,6 +61,7 @@
 		78CC90EA276A42260033CC9C /* HealthKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitHelper.swift; sourceTree = "<group>"; };
 		78CC90EE276A5ADB0033CC9C /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		78CC90F0276A5AF20033CC9C /* AlertContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContext.swift; sourceTree = "<group>"; };
+		78CC90F7276A70410033CC9C /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		78E2399F2768F2FC0058EE36 /* HeyHydrateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyHydrateApp.swift; sourceTree = "<group>"; };
 		78E239A02768F2FC0058EE36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		78E239A12768F2FD0058EE36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,6 +155,23 @@
 			path = Alerts;
 			sourceTree = "<group>";
 		};
+		78CC90F5276A70250033CC9C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				78CC90F6276A70310033CC9C /* ContentView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		78CC90F6276A70310033CC9C /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				78E239A02768F2FC0058EE36 /* ContentView.swift */,
+				78CC90F7276A70410033CC9C /* ContentViewModel.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
 		78E239992768F2FB0058EE36 = {
 			isa = PBXGroup;
 			children = (
@@ -170,11 +189,11 @@
 		78E2399E2768F2FC0058EE36 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				78CC90F5276A70250033CC9C /* Views */,
 				78CC90E2276A38630033CC9C /* Sheets */,
 				788425852769ECAF0085660E /* Utilities */,
 				78E239A12768F2FD0058EE36 /* Assets.xcassets */,
 				78E2399F2768F2FC0058EE36 /* HeyHydrateApp.swift */,
-				78E239A02768F2FC0058EE36 /* ContentView.swift */,
 				78E239DE2768F4060058EE36 /* AddWaterDrank */,
 				78E239DB2768F3C00058EE36 /* WaterDrankIndicator */,
 			);
@@ -477,6 +496,7 @@
 				78E239E02768F4200058EE36 /* AddWaterDrankView.swift in Sources */,
 				78E239DD2768F3EB0058EE36 /* WaterDrankIdicatorView.swift in Sources */,
 				78CC90E4276A387B0033CC9C /* DailyGoalSheet.swift in Sources */,
+				78CC90F8276A70410033CC9C /* ContentViewModel.swift in Sources */,
 				78CC90EB276A42260033CC9C /* HealthKitHelper.swift in Sources */,
 				78CC90EF276A5ADB0033CC9C /* AlertItem.swift in Sources */,
 				78E239C72768F2FD0058EE36 /* HeyHydrateApp.swift in Sources */,
