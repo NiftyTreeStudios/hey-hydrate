@@ -6,22 +6,19 @@
 //
 
 import SwiftUI
+import HealthKit
 
 struct ContentView: View {
-    @State private var percentageDrank: Int = 0
+    @State private var percentageDrank: Double = 0
     @State private var waterDrank: Int = 0
     @State private var goal: Int = 2000
     @State private var showPopover: Bool = false
+
+    @StateObject private var hkHelper = HealthKitHelper()
+
     var body: some View {
         VStack {
             HStack {
-                Button {
-                    waterDrank = 0
-                    percentageDrank = 0
-                } label: {
-                    Text("Reset")
-                }.padding()
-
                 Spacer()
                 Button {
                     self.showPopover = true
@@ -38,11 +35,20 @@ struct ContentView: View {
             }
             Spacer()
             // The water drank indicator
-            WaterDrankIdicatorView(percentageDrank: $percentageDrank, waterDrank: $waterDrank)
+            WaterDrankIdicatorView(percentageDrank: $percentageDrank, waterDrank: $hkHelper.waterAmount)
             Spacer()
             // Add more water drank
-            AddWaterDrankView(percentageDrank: $percentageDrank, waterDrank: $waterDrank, goal: $goal)
+            AddWaterDrankView(
+                percentageDrank: $percentageDrank,
+                waterDrank: $hkHelper.waterAmount,
+                goal: $goal,
+                hkHelper: hkHelper
+            )
             Spacer()
+        }
+        .onAppear {
+            hkHelper.autorizeHealthKit()
+            percentageDrank = calculatePercentageDrank(waterDrank: waterDrank, goal: goal)
         }
     }
 }

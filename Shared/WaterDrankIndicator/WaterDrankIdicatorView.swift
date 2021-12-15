@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WaterDrankIdicatorView: View {
-    @Binding var percentageDrank: Int
+    @Binding var percentageDrank: Double
     @Binding var waterDrank: Int
     var body: some View {
         ZStack {
@@ -19,7 +19,7 @@ struct WaterDrankIdicatorView: View {
 }
 
 struct WaterDrankBackground: View {
-    @Binding var percentageDrank: Int
+    @Binding var percentageDrank: Double
     @State private var waveOffset = Angle(degrees: 0)
     @State private var waveOffset2 = Angle(degrees: 180)
 
@@ -34,12 +34,12 @@ struct WaterDrankBackground: View {
                 .frame(width: 200, height: 200, alignment: .center)
                 .foregroundColor(Color(UIColor.systemBackground))
             ZStack {
-                Wave(offset: Angle(degrees: self.waveOffset.degrees), percent: Double(percentageDrank)/100)
+                Wave(offset: Angle(degrees: self.waveOffset.degrees), percent: $percentageDrank)
                     .fill(customBlue)
                     .opacity(0.5)
                     .frame(width: 200, height: 210)
                     .offset(y: -5)
-                Wave(offset: Angle(degrees: self.waveOffset2.degrees), percent: Double(percentageDrank)/100)
+                Wave(offset: Angle(degrees: self.waveOffset2.degrees), percent: $percentageDrank)
                     .fill(customBlue)
                     .opacity(0.5)
                     .frame(width: 200, height: 210)
@@ -78,7 +78,7 @@ struct Wave: Shape {
     }
 
     var offset: Angle
-    var percent: Double
+    @Binding var percent: Double
 
     var animatableData: Double {
         get { offset.degrees }
