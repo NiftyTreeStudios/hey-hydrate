@@ -1,0 +1,6 @@
+framework module Pods_Hey__Hydrate___iOS_ {
+  umbrella header "Pods-Hey! Hydrate! (iOS)-umbrella.h"
+
+  export *
+  module * { export * }
+}

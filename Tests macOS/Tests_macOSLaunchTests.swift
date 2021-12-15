@@ -7,6 +7,7 @@
 
 import XCTest
 
+// swiftlint:disable:next type_name
 class Tests_macOSLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {

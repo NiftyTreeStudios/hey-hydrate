@@ -31,16 +31,16 @@ struct ContentView: View {
                 .padding()
                 .sheet(isPresented: $showPopover, onDismiss: {
                     percentageDrank = calculatePercentageDrank(waterDrank: waterDrank, goal: goal)
-                }) {
+                }) { // swiftlint:disable:this multiple_closures_with_trailing_closure
                     GoalPopover(goal: $goal)
                 }
 
             }
             Spacer()
-            /// The water drank indicator
+            // The water drank indicator
             WaterDrankIdicatorView(percentageDrank: $percentageDrank, waterDrank: $waterDrank)
             Spacer()
-            /// Add more water drank
+            // Add more water drank
             AddWaterDrankView(percentageDrank: $percentageDrank, waterDrank: $waterDrank, goal: $goal)
             Spacer()
         }

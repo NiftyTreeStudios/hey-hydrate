@@ -13,7 +13,7 @@ struct AddWaterDrankView: View {
     @Binding var goal: Int
     @State var cupSize: Int = 200
     var body: some View {
-        VStack{
+        VStack {
             HStack {
                 Button {
                     if cupSize <= 0 {
