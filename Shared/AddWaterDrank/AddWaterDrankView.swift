@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct AddWaterDrankView: View {
-    @Binding var percentageDrank: Int
+    @Binding var percentageDrank: Double
     @Binding var waterDrank: Int
     @Binding var goal: Int
     @State private var cupSize: Int = 200
     @State private var pickCupSheetShown: Bool = false
+
+    @EnvironmentObject var hkHelper: HealthKitHelper
+
     var body: some View {
         VStack {
             HStack {
@@ -40,6 +43,7 @@ struct AddWaterDrankView: View {
             Button {
                 waterDrank += cupSize
                 percentageDrank = calculatePercentageDrank(waterDrank: waterDrank, goal: goal)
+                hkHelper.updateWaterAmount(waterAmount: cupSize)
             } label: {
                 Text("Add water")
                     .foregroundColor(.white)
@@ -53,6 +57,10 @@ struct AddWaterDrankView: View {
 
 struct AddWaterDrankView_Previews: PreviewProvider {
     static var previews: some View {
-        AddWaterDrankView(percentageDrank: .constant(30), waterDrank: .constant(500), goal: .constant(2000))
+        AddWaterDrankView(
+            percentageDrank: .constant(30),
+            waterDrank: .constant(500),
+            goal: .constant(2000)
+        )
     }
 }

@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct HeyHydrateApp: App {
+
+    @StateObject private var hkHelper = HealthKitHelper()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(hkHelper)
         }
     }
 }

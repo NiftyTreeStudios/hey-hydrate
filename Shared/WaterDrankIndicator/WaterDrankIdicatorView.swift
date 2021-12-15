@@ -8,21 +8,29 @@
 import SwiftUI
 
 struct WaterDrankIdicatorView: View {
-    @Binding var percentageDrank: Int
+    @Binding var percentageDrank: Double
+    @Binding var goal: Int
     @Binding var waterDrank: Int
+
+    @EnvironmentObject var hkHelper: HealthKitHelper
+
     var body: some View {
         ZStack {
             Text("\(waterDrank)")
                 .font(.title)
-        }.background(WaterDrankBackground(percentageDrank: $percentageDrank))
+        }
+        .background(WaterDrankBackground(percentageDrank: $percentageDrank))
+        .onChange(of: waterDrank) { _ in
+            percentageDrank = calculatePercentageDrank(waterDrank: waterDrank, goal: goal)
+        }
     }
 }
 
 struct WaterDrankBackground: View {
-    @Binding var percentageDrank: Int
+    @Binding var percentageDrank: Double
     @State private var waveOffset = Angle(degrees: 0)
     @State private var waveOffset2 = Angle(degrees: 180)
-
+    @EnvironmentObject var hkHelper: HealthKitHelper
     var customBlue: Color = Color(red: 0, green: 0.5, blue: 0.9, opacity: 1)
     var body: some View {
         ZStack {
@@ -34,12 +42,12 @@ struct WaterDrankBackground: View {
                 .frame(width: 200, height: 200, alignment: .center)
                 .foregroundColor(Color(UIColor.systemBackground))
             ZStack {
-                Wave(offset: Angle(degrees: self.waveOffset.degrees), percent: Double(percentageDrank)/100)
+                Wave(offset: Angle(degrees: self.waveOffset.degrees), percent: percentageDrank)
                     .fill(customBlue)
                     .opacity(0.5)
                     .frame(width: 200, height: 210)
                     .offset(y: -5)
-                Wave(offset: Angle(degrees: self.waveOffset2.degrees), percent: Double(percentageDrank)/100)
+                Wave(offset: Angle(degrees: self.waveOffset2.degrees), percent: percentageDrank)
                     .fill(customBlue)
                     .opacity(0.5)
                     .frame(width: 200, height: 210)
@@ -80,14 +88,19 @@ struct Wave: Shape {
     var offset: Angle
     var percent: Double
 
-    var animatableData: Double {
-        get { offset.degrees }
-        set { offset = Angle(degrees: newValue) }
+    var animatableData: AnimatablePair<Double, Double> {
+        get {
+            AnimatablePair(offset.degrees, percent)
+        }
+        set {
+            offset = Angle(degrees: newValue.first)
+            percent = newValue.second
+        }
     }
 }
 
 struct WaterDrankIdicatorView_Previews: PreviewProvider {
     static var previews: some View {
-        WaterDrankIdicatorView(percentageDrank: .constant(30), waterDrank: .constant(500))
+        WaterDrankIdicatorView(percentageDrank: .constant(30), goal: .constant(5000), waterDrank: .constant(500))
     }
 }
