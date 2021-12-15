@@ -32,7 +32,7 @@ struct WaterDrankBackground: View {
                 .opacity(0.75)
             Circle()
                 .frame(width: 200, height: 200, alignment: .center)
-                .foregroundColor(.white)
+                .foregroundColor(Color(UIColor.systemBackground))
             ZStack {
                 Wave(offset: Angle(degrees: self.waveOffset.degrees), percent: Double(percentageDrank)/100)
                     .fill(customBlue)
