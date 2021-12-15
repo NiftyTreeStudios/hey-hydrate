@@ -22,7 +22,6 @@ struct ContentView: View {
                     Text("Reset")
                 }.padding()
 //test swiftlint warning on xcode cloud run
-                
                 Spacer()
                 Button {
                     self.showPopover = true
@@ -35,7 +34,6 @@ struct ContentView: View {
                 }) { // swiftlint:disable:this multiple_closures_with_trailing_closure
                     GoalPopover(goal: $goal)
                 }
-
             }
             Spacer()
             // The water drank indicator
