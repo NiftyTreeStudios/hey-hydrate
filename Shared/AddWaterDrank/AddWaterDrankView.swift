@@ -11,7 +11,8 @@ struct AddWaterDrankView: View {
     @Binding var percentageDrank: Int
     @Binding var waterDrank: Int
     @Binding var goal: Int
-    @State var cupSize: Int = 200
+    @State private var cupSize: Int = 200
+    @State private var pickCupSheetShown: Bool = false
     var body: some View {
         VStack {
             HStack {
@@ -24,7 +25,12 @@ struct AddWaterDrankView: View {
                 } label: {
                     Image(systemName: "minus")
                 }
-                Text("\(cupSize)")
+                Button {
+                    self.pickCupSheetShown = true
+                } label: {
+                    Text("\(cupSize)")
+                        .font(.title)
+                }
                 Button {
                     cupSize += 50
                 } label: {
@@ -39,6 +45,8 @@ struct AddWaterDrankView: View {
                     .foregroundColor(.white)
                     .padding()
             }.background(Capsule().foregroundColor(.blue))
+        }.sheet(isPresented: $pickCupSheetShown) {
+            CupSizeSheet(cupSize: $cupSize, isPresented: $pickCupSheetShown)
         }
     }
 }
