@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		788425832769E21C0085660E /* GoalPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788425822769E21C0085660E /* GoalPopover.swift */; };
+		788425842769E21C0085660E /* GoalPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788425822769E21C0085660E /* GoalPopover.swift */; };
+		788425872769ECC20085660E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788425862769ECC20085660E /* Utilities.swift */; };
+		788425882769ECC20085660E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788425862769ECC20085660E /* Utilities.swift */; };
 		78E239B82768F2FD0058EE36 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239B72768F2FD0058EE36 /* Tests_iOS.swift */; };
 		78E239BA2768F2FD0058EE36 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239B92768F2FD0058EE36 /* Tests_iOSLaunchTests.swift */; };
 		78E239C42768F2FD0058EE36 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239C32768F2FD0058EE36 /* Tests_macOS.swift */; };
@@ -39,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		788425822769E21C0085660E /* GoalPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalPopover.swift; sourceTree = "<group>"; };
+		788425862769ECC20085660E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		78E2399F2768F2FC0058EE36 /* HeyHydrateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeyHydrateApp.swift; sourceTree = "<group>"; };
 		78E239A02768F2FC0058EE36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		78E239A12768F2FD0058EE36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		788425852769ECAF0085660E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				788425862769ECC20085660E /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		78E239992768F2FB0058EE36 = {
 			isa = PBXGroup;
 			children = (
@@ -101,11 +115,13 @@
 		78E2399E2768F2FC0058EE36 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				788425852769ECAF0085660E /* Utilities */,
 				78E239A12768F2FD0058EE36 /* Assets.xcassets */,
 				78E2399F2768F2FC0058EE36 /* HeyHydrateApp.swift */,
 				78E239A02768F2FC0058EE36 /* ContentView.swift */,
 				78E239DE2768F4060058EE36 /* AddWaterDrank */,
 				78E239DB2768F3C00058EE36 /* WaterDrankIndicator */,
+				788425822769E21C0085660E /* GoalPopover.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -321,6 +337,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				788425872769ECC20085660E /* Utilities.swift in Sources */,
+				788425832769E21C0085660E /* GoalPopover.swift in Sources */,
 				78E239C92768F2FD0058EE36 /* ContentView.swift in Sources */,
 				78E239E02768F4200058EE36 /* AddWaterDrankView.swift in Sources */,
 				78E239DD2768F3EB0058EE36 /* WaterDrankIdicatorView.swift in Sources */,
@@ -333,6 +351,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				78E239CA2768F2FD0058EE36 /* ContentView.swift in Sources */,
+				788425842769E21C0085660E /* GoalPopover.swift in Sources */,
+				788425882769ECC20085660E /* Utilities.swift in Sources */,
 				78E239C82768F2FD0058EE36 /* HeyHydrateApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,33 +9,85 @@ import SwiftUI
 
 struct WaterDrankIdicatorView: View {
     @Binding var percentageDrank: Int
+    @Binding var waterDrank: Int
     var body: some View {
         ZStack {
-            Text("Water drank!")
+            Text("\(waterDrank)")
+                .font(.title)
         }.background(WaterDrankBackground(percentageDrank: $percentageDrank))
     }
 }
 
 struct WaterDrankBackground: View {
     @Binding var percentageDrank: Int
+    @State private var waveOffset = Angle(degrees: 0)
+    @State private var waveOffset2 = Angle(degrees: 180)
+    
+    var customBlue: Color = Color(red: 0, green: 0.5, blue: 0.9, opacity: 1)
     var body: some View {
         ZStack {
             Circle()
-                .frame(width: 200, height: 200, alignment: .center)
-                .foregroundColor(.blue)
+                .frame(width: 220, height: 220, alignment: .center)
+                .foregroundColor(customBlue)
+                .opacity(0.75)
             Circle()
-                .frame(width: 190, height: 190, alignment: .center)
-                .foregroundColor(.white)
-            Rectangle()
                 .frame(width: 200, height: 200, alignment: .center)
-                .foregroundColor(.blue)
-                .offset(x: 0, y: 200 - CGFloat(percentageDrank * 2))
+                .foregroundColor(.white)
+            ZStack {
+                Wave(offset: Angle(degrees: self.waveOffset.degrees), percent: Double(percentageDrank)/100)
+                    .fill(customBlue)
+                    .opacity(0.5)
+                    .frame(width: 200, height: 210)
+                    .offset(y: -5)
+                Wave(offset: Angle(degrees: self.waveOffset2.degrees), percent: Double(percentageDrank)/100)
+                    .fill(customBlue)
+                    .opacity(0.5)
+                    .frame(width: 200, height: 210)
+                    .offset(x: 5)
+            }
+            .mask(Circle().frame(width: 190, height: 190, alignment: .center))
         }
+        .onAppear {
+            withAnimation(Animation.linear(duration: 2).repeatForever(autoreverses: false)) {
+                self.waveOffset = Angle(degrees: 360)
+                self.waveOffset2 = Angle(degrees: -180)
+            }
+        }
+    }
+}
+
+struct Wave: Shape {
+    func path(in rect: CGRect) -> Path {
+        var p = Path()
+        let waveHeight = 0.017 * rect.height
+        let yOffset = CGFloat(1 - percent) * (rect.height - 4 * waveHeight) + 2 * waveHeight
+        let startAngle = offset
+        let endAngle = offset + Angle(degrees: 360)
+        p.move(to: CGPoint(x: 0, y: yOffset + waveHeight * CGFloat(sin(offset.radians))))
+        
+        for angle in stride(from: startAngle.degrees, through: endAngle.degrees, by: 5) {
+            let x = CGFloat((angle - startAngle.degrees) / 360) * rect.width
+            p.addLine(to: CGPoint(x: x, y: yOffset + waveHeight * CGFloat(sin(Angle(degrees: angle).radians))))
+        }
+        
+        p.addLine(to: CGPoint(x: rect.width, y: rect.height))
+        p.addLine(to: CGPoint(x: 0, y: rect.height))
+        p.closeSubpath()
+        
+        return p
+    }
+    
+    var offset: Angle
+    var percent: Double
+    
+    var animatableData: Double {
+        get { offset.degrees }
+        set { offset = Angle(degrees: newValue) }
     }
 }
 
 struct WaterDrankIdicatorView_Previews: PreviewProvider {
     static var previews: some View {
-        WaterDrankIdicatorView(percentageDrank: .constant(30))
+        WaterDrankIdicatorView(percentageDrank: .constant(30), waterDrank: .constant(500))
     }
 }
