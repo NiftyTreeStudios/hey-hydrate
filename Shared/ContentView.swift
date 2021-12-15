@@ -22,6 +22,7 @@ struct ContentView: View {
                     Text("Reset")
                 }.padding()
 //test swiftlint warning on xcode cloud run
+                
                 Spacer()
                 Button {
                     self.showPopover = true
