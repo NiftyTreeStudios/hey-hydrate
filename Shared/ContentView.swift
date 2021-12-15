@@ -32,7 +32,7 @@ struct ContentView: View {
                 .sheet(isPresented: $showPopover, onDismiss: {
                     percentageDrank = calculatePercentageDrank(waterDrank: waterDrank, goal: goal)
                 }) { // swiftlint:disable:this multiple_closures_with_trailing_closure
-                    GoalPopover(goal: $goal)
+                    DailyGoalSheet(goal: $goal, isPresented: $showPopover)
                 }
 
             }
