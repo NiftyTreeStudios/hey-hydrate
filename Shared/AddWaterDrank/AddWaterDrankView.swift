@@ -11,7 +11,7 @@ struct AddWaterDrankView: View {
     @Binding var percentageDrank: Double
     @Binding var waterDrank: Int
     @Binding var goal: Int
-    @State private var cupSize: Int = 200
+    @AppStorage("cupSize") var cupSize: Int = 200
     @State private var pickCupSheetShown: Bool = false
 
     @EnvironmentObject var hkHelper: HealthKitHelper

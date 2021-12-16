@@ -685,7 +685,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate;
 				PRODUCT_NAME = "Hey! Hydrate!";
 				SDKROOT = iphoneos;
@@ -721,7 +721,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate;
 				PRODUCT_NAME = "Hey! Hydrate!";
 				SDKROOT = iphoneos;
