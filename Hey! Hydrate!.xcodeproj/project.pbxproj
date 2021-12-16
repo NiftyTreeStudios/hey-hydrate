@@ -7,30 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		43AC9A93DB57AACCDCABF374 /* Pods_Hey__Hydrate___macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D725446D58478BED29A347 /* Pods_Hey__Hydrate___macOS_.framework */; };
+		496255739FD78AE1CD4D8150 /* Pods_Hey_Hydrate_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609EB0EAB846E7893728FC7A /* Pods_Hey_Hydrate_iOS.framework */; };
 		788425872769ECC20085660E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788425862769ECC20085660E /* Utilities.swift */; };
-		788425882769ECC20085660E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788425862769ECC20085660E /* Utilities.swift */; };
 		78CC90E4276A387B0033CC9C /* DailyGoalSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90E3276A387B0033CC9C /* DailyGoalSheet.swift */; };
 		78CC90E6276A38880033CC9C /* CupSizeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90E5276A38880033CC9C /* CupSizeSheet.swift */; };
 		78CC90E9276A40010033CC9C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CC90E8276A40010033CC9C /* HealthKit.framework */; };
 		78CC90EB276A42260033CC9C /* HealthKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90EA276A42260033CC9C /* HealthKitHelper.swift */; };
-		78CC90EC276A42260033CC9C /* HealthKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90EA276A42260033CC9C /* HealthKitHelper.swift */; };
 		78CC90EF276A5ADB0033CC9C /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90EE276A5ADB0033CC9C /* AlertItem.swift */; };
 		78CC90F1276A5AF20033CC9C /* AlertContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90F0276A5AF20033CC9C /* AlertContext.swift */; };
 		78CC90F8276A70410033CC9C /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90F7276A70410033CC9C /* ContentViewModel.swift */; };
 		78E239B82768F2FD0058EE36 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239B72768F2FD0058EE36 /* Tests_iOS.swift */; };
 		78E239BA2768F2FD0058EE36 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239B92768F2FD0058EE36 /* Tests_iOSLaunchTests.swift */; };
-		78E239C42768F2FD0058EE36 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239C32768F2FD0058EE36 /* Tests_macOS.swift */; };
-		78E239C62768F2FD0058EE36 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239C52768F2FD0058EE36 /* Tests_macOSLaunchTests.swift */; };
 		78E239C72768F2FD0058EE36 /* HeyHydrateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2399F2768F2FC0058EE36 /* HeyHydrateApp.swift */; };
-		78E239C82768F2FD0058EE36 /* HeyHydrateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E2399F2768F2FC0058EE36 /* HeyHydrateApp.swift */; };
 		78E239C92768F2FD0058EE36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239A02768F2FC0058EE36 /* ContentView.swift */; };
-		78E239CA2768F2FD0058EE36 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239A02768F2FC0058EE36 /* ContentView.swift */; };
 		78E239CB2768F2FD0058EE36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E239A12768F2FD0058EE36 /* Assets.xcassets */; };
-		78E239CC2768F2FD0058EE36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78E239A12768F2FD0058EE36 /* Assets.xcassets */; };
 		78E239DD2768F3EB0058EE36 /* WaterDrankIdicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239DC2768F3EB0058EE36 /* WaterDrankIdicatorView.swift */; };
 		78E239E02768F4200058EE36 /* AddWaterDrankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E239DF2768F4200058EE36 /* AddWaterDrankView.swift */; };
-		C009C0BBC7F4775DF6C9C087 /* Pods_Hey__Hydrate___iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BB52653C5935879A019B5E /* Pods_Hey__Hydrate___iOS_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,18 +33,12 @@
 			remoteGlobalIDString = 78E239A52768F2FD0058EE36;
 			remoteInfo = "Hey! Hydrate! (iOS)";
 		};
-		78E239C02768F2FD0058EE36 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 78E2399A2768F2FB0058EE36 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 78E239AB2768F2FD0058EE36;
-			remoteInfo = "Hey! Hydrate! (macOS)";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		09D725446D58478BED29A347 /* Pods_Hey__Hydrate___macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Hey__Hydrate___macOS_.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2ED7D004287F8D5C39B661D9 /* Pods-Hey! Hydrate! (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey! Hydrate! (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Hey! Hydrate! (macOS)/Pods-Hey! Hydrate! (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		2F1379C27AA9C38AD7F02D9B /* Pods-Hey-Hydrate-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey-Hydrate-iOS.release.xcconfig"; path = "Target Support Files/Pods-Hey-Hydrate-iOS/Pods-Hey-Hydrate-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		31E6AD51A6B6520D81B112DC /* Pods-Hey-Hydrate-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey-Hydrate-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Hey-Hydrate-iOS/Pods-Hey-Hydrate-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		609EB0EAB846E7893728FC7A /* Pods_Hey_Hydrate_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hey_Hydrate_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		788425862769ECC20085660E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		78CC90E3276A387B0033CC9C /* DailyGoalSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalSheet.swift; sourceTree = "<group>"; };
 		78CC90E5276A38880033CC9C /* CupSizeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupSizeSheet.swift; sourceTree = "<group>"; };
@@ -66,20 +52,11 @@
 		78E239A02768F2FC0058EE36 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		78E239A12768F2FD0058EE36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78E239A62768F2FD0058EE36 /* Hey! Hydrate!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hey! Hydrate!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		78E239AC2768F2FD0058EE36 /* Hey! Hydrate!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hey! Hydrate!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		78E239AE2768F2FD0058EE36 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		78E239B32768F2FD0058EE36 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E239B72768F2FD0058EE36 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
 		78E239B92768F2FD0058EE36 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
-		78E239BF2768F2FD0058EE36 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		78E239C32768F2FD0058EE36 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
-		78E239C52768F2FD0058EE36 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		78E239DC2768F3EB0058EE36 /* WaterDrankIdicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterDrankIdicatorView.swift; sourceTree = "<group>"; };
 		78E239DF2768F4200058EE36 /* AddWaterDrankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWaterDrankView.swift; sourceTree = "<group>"; };
-		A7BB52653C5935879A019B5E /* Pods_Hey__Hydrate___iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Hey__Hydrate___iOS_.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C64EFB897260C533FAC19A3C /* Pods-Hey! Hydrate! (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey! Hydrate! (iOS).release.xcconfig"; path = "Target Support Files/Pods-Hey! Hydrate! (iOS)/Pods-Hey! Hydrate! (iOS).release.xcconfig"; sourceTree = "<group>"; };
-		E26BB887A751A8DE48BCA16A /* Pods-Hey! Hydrate! (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey! Hydrate! (macOS).release.xcconfig"; path = "Target Support Files/Pods-Hey! Hydrate! (macOS)/Pods-Hey! Hydrate! (macOS).release.xcconfig"; sourceTree = "<group>"; };
-		F2C6873F5E99F2A5018B4361 /* Pods-Hey! Hydrate! (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey! Hydrate! (iOS).debug.xcconfig"; path = "Target Support Files/Pods-Hey! Hydrate! (iOS)/Pods-Hey! Hydrate! (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,27 +64,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C009C0BBC7F4775DF6C9C087 /* Pods_Hey__Hydrate___iOS_.framework in Frameworks */,
 				78CC90E9276A40010033CC9C /* HealthKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		78E239A92768F2FD0058EE36 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				43AC9A93DB57AACCDCABF374 /* Pods_Hey__Hydrate___macOS_.framework in Frameworks */,
+				496255739FD78AE1CD4D8150 /* Pods_Hey_Hydrate_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		78E239B02768F2FD0058EE36 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		78E239BC2768F2FD0058EE36 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -121,8 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				78CC90E8276A40010033CC9C /* HealthKit.framework */,
-				A7BB52653C5935879A019B5E /* Pods_Hey__Hydrate___iOS_.framework */,
-				09D725446D58478BED29A347 /* Pods_Hey__Hydrate___macOS_.framework */,
+				609EB0EAB846E7893728FC7A /* Pods_Hey_Hydrate_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -177,9 +138,7 @@
 			children = (
 				78CC90E7276A40010033CC9C /* Hey! Hydrate! (iOS).entitlements */,
 				78E2399E2768F2FC0058EE36 /* Shared */,
-				78E239AD2768F2FD0058EE36 /* macOS */,
 				78E239B62768F2FD0058EE36 /* Tests iOS */,
-				78E239C22768F2FD0058EE36 /* Tests macOS */,
 				78E239A72768F2FD0058EE36 /* Products */,
 				7939FE2A29B1D55185942758 /* Pods */,
 				01733FDD023C499A94818DCB /* Frameworks */,
@@ -204,19 +163,9 @@
 			isa = PBXGroup;
 			children = (
 				78E239A62768F2FD0058EE36 /* Hey! Hydrate!.app */,
-				78E239AC2768F2FD0058EE36 /* Hey! Hydrate!.app */,
 				78E239B32768F2FD0058EE36 /* Tests iOS.xctest */,
-				78E239BF2768F2FD0058EE36 /* Tests macOS.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		78E239AD2768F2FD0058EE36 /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				78E239AE2768F2FD0058EE36 /* macOS.entitlements */,
-			);
-			path = macOS;
 			sourceTree = "<group>";
 		};
 		78E239B62768F2FD0058EE36 /* Tests iOS */ = {
@@ -226,15 +175,6 @@
 				78E239B92768F2FD0058EE36 /* Tests_iOSLaunchTests.swift */,
 			);
 			path = "Tests iOS";
-			sourceTree = "<group>";
-		};
-		78E239C22768F2FD0058EE36 /* Tests macOS */ = {
-			isa = PBXGroup;
-			children = (
-				78E239C32768F2FD0058EE36 /* Tests_macOS.swift */,
-				78E239C52768F2FD0058EE36 /* Tests_macOSLaunchTests.swift */,
-			);
-			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
 		78E239DB2768F3C00058EE36 /* WaterDrankIndicator */ = {
@@ -256,10 +196,8 @@
 		7939FE2A29B1D55185942758 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F2C6873F5E99F2A5018B4361 /* Pods-Hey! Hydrate! (iOS).debug.xcconfig */,
-				C64EFB897260C533FAC19A3C /* Pods-Hey! Hydrate! (iOS).release.xcconfig */,
-				2ED7D004287F8D5C39B661D9 /* Pods-Hey! Hydrate! (macOS).debug.xcconfig */,
-				E26BB887A751A8DE48BCA16A /* Pods-Hey! Hydrate! (macOS).release.xcconfig */,
+				31E6AD51A6B6520D81B112DC /* Pods-Hey-Hydrate-iOS.debug.xcconfig */,
+				2F1379C27AA9C38AD7F02D9B /* Pods-Hey-Hydrate-iOS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -267,9 +205,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		78E239A52768F2FD0058EE36 /* Hey! Hydrate! (iOS) */ = {
+		78E239A52768F2FD0058EE36 /* Hey-Hydrate-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 78E239CF2768F2FD0058EE36 /* Build configuration list for PBXNativeTarget "Hey! Hydrate! (iOS)" */;
+			buildConfigurationList = 78E239CF2768F2FD0058EE36 /* Build configuration list for PBXNativeTarget "Hey-Hydrate-iOS" */;
 			buildPhases = (
 				43A4C0057AC95B708153CC7E /* [CP] Check Pods Manifest.lock */,
 				78E239A22768F2FD0058EE36 /* Sources */,
@@ -281,27 +219,9 @@
 			);
 			dependencies = (
 			);
-			name = "Hey! Hydrate! (iOS)";
+			name = "Hey-Hydrate-iOS";
 			productName = "Hey! Hydrate! (iOS)";
 			productReference = 78E239A62768F2FD0058EE36 /* Hey! Hydrate!.app */;
-			productType = "com.apple.product-type.application";
-		};
-		78E239AB2768F2FD0058EE36 /* Hey! Hydrate! (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 78E239D22768F2FD0058EE36 /* Build configuration list for PBXNativeTarget "Hey! Hydrate! (macOS)" */;
-			buildPhases = (
-				9D9FE67D4D438909EE7CC733 /* [CP] Check Pods Manifest.lock */,
-				78E239A82768F2FD0058EE36 /* Sources */,
-				78E239A92768F2FD0058EE36 /* Frameworks */,
-				78E239AA2768F2FD0058EE36 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Hey! Hydrate! (macOS)";
-			productName = "Hey! Hydrate! (macOS)";
-			productReference = 78E239AC2768F2FD0058EE36 /* Hey! Hydrate!.app */;
 			productType = "com.apple.product-type.application";
 		};
 		78E239B22768F2FD0058EE36 /* Tests iOS */ = {
@@ -322,24 +242,6 @@
 			productReference = 78E239B32768F2FD0058EE36 /* Tests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		78E239BE2768F2FD0058EE36 /* Tests macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 78E239D82768F2FD0058EE36 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
-			buildPhases = (
-				78E239BB2768F2FD0058EE36 /* Sources */,
-				78E239BC2768F2FD0058EE36 /* Frameworks */,
-				78E239BD2768F2FD0058EE36 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				78E239C12768F2FD0058EE36 /* PBXTargetDependency */,
-			);
-			name = "Tests macOS";
-			productName = "Tests macOS";
-			productReference = 78E239BF2768F2FD0058EE36 /* Tests macOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -353,16 +255,9 @@
 					78E239A52768F2FD0058EE36 = {
 						CreatedOnToolsVersion = 13.2;
 					};
-					78E239AB2768F2FD0058EE36 = {
-						CreatedOnToolsVersion = 13.2;
-					};
 					78E239B22768F2FD0058EE36 = {
 						CreatedOnToolsVersion = 13.2;
 						TestTargetID = 78E239A52768F2FD0058EE36;
-					};
-					78E239BE2768F2FD0058EE36 = {
-						CreatedOnToolsVersion = 13.2;
-						TestTargetID = 78E239AB2768F2FD0058EE36;
 					};
 				};
 			};
@@ -379,10 +274,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				78E239A52768F2FD0058EE36 /* Hey! Hydrate! (iOS) */,
-				78E239AB2768F2FD0058EE36 /* Hey! Hydrate! (macOS) */,
+				78E239A52768F2FD0058EE36 /* Hey-Hydrate-iOS */,
 				78E239B22768F2FD0058EE36 /* Tests iOS */,
-				78E239BE2768F2FD0058EE36 /* Tests macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -396,22 +289,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78E239AA2768F2FD0058EE36 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				78E239CC2768F2FD0058EE36 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		78E239B12768F2FD0058EE36 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		78E239BD2768F2FD0058EE36 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -436,7 +314,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Hey! Hydrate! (iOS)-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Hey-Hydrate-iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -460,28 +338,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
-		9D9FE67D4D438909EE7CC733 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Hey! Hydrate! (macOS)-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -503,17 +359,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78E239A82768F2FD0058EE36 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				78E239CA2768F2FD0058EE36 /* ContentView.swift in Sources */,
-				788425882769ECC20085660E /* Utilities.swift in Sources */,
-				78CC90EC276A42260033CC9C /* HealthKitHelper.swift in Sources */,
-				78E239C82768F2FD0058EE36 /* HeyHydrateApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		78E239AF2768F2FD0058EE36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -523,27 +368,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78E239BB2768F2FD0058EE36 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				78E239C62768F2FD0058EE36 /* Tests_macOSLaunchTests.swift in Sources */,
-				78E239C42768F2FD0058EE36 /* Tests_macOS.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		78E239B52768F2FD0058EE36 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 78E239A52768F2FD0058EE36 /* Hey! Hydrate! (iOS) */;
+			target = 78E239A52768F2FD0058EE36 /* Hey-Hydrate-iOS */;
 			targetProxy = 78E239B42768F2FD0058EE36 /* PBXContainerItemProxy */;
-		};
-		78E239C12768F2FD0058EE36 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 78E239AB2768F2FD0058EE36 /* Hey! Hydrate! (macOS) */;
-			targetProxy = 78E239C02768F2FD0058EE36 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -661,7 +492,7 @@
 		};
 		78E239D02768F2FD0058EE36 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2C6873F5E99F2A5018B4361 /* Pods-Hey! Hydrate! (iOS).debug.xcconfig */;
+			baseConfigurationReference = 31E6AD51A6B6520D81B112DC /* Pods-Hey-Hydrate-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -697,7 +528,7 @@
 		};
 		78E239D12768F2FD0058EE36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C64EFB897260C533FAC19A3C /* Pods-Hey! Hydrate! (iOS).release.xcconfig */;
+			baseConfigurationReference = 2F1379C27AA9C38AD7F02D9B /* Pods-Hey-Hydrate-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -729,64 +560,6 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		78E239D32768F2FD0058EE36 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2ED7D004287F8D5C39B661D9 /* Pods-Hey! Hydrate! (macOS).debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LBHT4Q3RSF;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Hey--Hydrate-";
-				PRODUCT_NAME = "Hey! Hydrate!";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		78E239D42768F2FD0058EE36 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E26BB887A751A8DE48BCA16A /* Pods-Hey! Hydrate! (macOS).release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LBHT4Q3RSF;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Hey--Hydrate-";
-				PRODUCT_NAME = "Hey! Hydrate!";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -831,44 +604,6 @@
 			};
 			name = Release;
 		};
-		78E239D92768F2FD0058EE36 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LBHT4Q3RSF;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Hey! Hydrate! (macOS)";
-			};
-			name = Debug;
-		};
-		78E239DA2768F2FD0058EE36 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LBHT4Q3RSF;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.niftytreestudios.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Hey! Hydrate! (macOS)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -881,20 +616,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		78E239CF2768F2FD0058EE36 /* Build configuration list for PBXNativeTarget "Hey! Hydrate! (iOS)" */ = {
+		78E239CF2768F2FD0058EE36 /* Build configuration list for PBXNativeTarget "Hey-Hydrate-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				78E239D02768F2FD0058EE36 /* Debug */,
 				78E239D12768F2FD0058EE36 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		78E239D22768F2FD0058EE36 /* Build configuration list for PBXNativeTarget "Hey! Hydrate! (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				78E239D32768F2FD0058EE36 /* Debug */,
-				78E239D42768F2FD0058EE36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -904,15 +630,6 @@
 			buildConfigurations = (
 				78E239D62768F2FD0058EE36 /* Debug */,
 				78E239D72768F2FD0058EE36 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		78E239D82768F2FD0058EE36 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				78E239D92768F2FD0058EE36 /* Debug */,
-				78E239DA2768F2FD0058EE36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
