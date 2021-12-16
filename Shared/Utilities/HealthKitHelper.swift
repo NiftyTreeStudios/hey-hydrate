@@ -9,14 +9,44 @@ import SwiftUI
 import HealthKit
 
 final class HealthKitHelper: ObservableObject {
-
+    @AppStorage("previousAppUse") var previousAppUse: Double = 0
     @Published var waterAmount: Int = 0
     @Published var alertItem: AlertItem?
 
     let healthStore = HKHealthStore()
 
+    func setupHealthKit() {
+        let authorizationStatus = healthStore.authorizationStatus(
+            for: HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryWater)!
+        )
+        switch authorizationStatus {
+        case .notDetermined:
+            authorizeHealthKit()
+        case .sharingDenied:
+            self.alertItem = AlertContext.unableToAccessHealthKit
+        case .sharingAuthorized:
+            self.getWater { (result) in
+                DispatchQueue.main.async {
+                    self.waterAmount = result
+                    self.resetValuesIfLoginWasInPast()
+                }
+            }
+        @unknown default:
+            self.alertItem = AlertContext.unableToUpdateHealthRecords
+        }
+    }
+
+    func resetValuesIfLoginWasInPast() {
+        let previousUse = Date(timeIntervalSinceReferenceDate: previousAppUse)
+        if !Calendar.current.isDateInToday(previousUse) {
+            waterAmount = 0
+        }
+        previousAppUse = Date().timeIntervalSinceReferenceDate
+    }
+
+    // MARK: Initial authorizations
     /// Function used to authorize the usage of HealthKit.
-    func autorizeHealthKit() {
+    func authorizeHealthKit() {
         let healthStore = HKHealthStore()
         // Used to define the identifiers that create quantity type objects.
         let healthKitTypes: Set = [HKObjectType.quantityType(forIdentifier: HKQuantityTypeIdentifier.dietaryWater)!]
@@ -91,11 +121,9 @@ final class HealthKitHelper: ObservableObject {
             start: startOfDay,
             end: now
         )
-        print("Water amount: \(waterAmount)")
-        print("Water amount to save: \(waterAmountToSave)")
         healthStore.save(waterAmountToSave) { success, error in
             if error != nil {
-                self.alertItem = AlertContext.unableToUpdateHealthRecords
+                self.setupHealthKit()
             }
             if success {
                 print("Update worked!")

@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		496255739FD78AE1CD4D8150 /* Pods_Hey_Hydrate_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609EB0EAB846E7893728FC7A /* Pods_Hey_Hydrate_iOS.framework */; };
 		788425872769ECC20085660E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788425862769ECC20085660E /* Utilities.swift */; };
-		78CC90E4276A387B0033CC9C /* DailyGoalSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90E3276A387B0033CC9C /* DailyGoalSheet.swift */; };
-		78CC90E6276A38880033CC9C /* CupSizeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90E5276A38880033CC9C /* CupSizeSheet.swift */; };
+		78CC90E4276A387B0033CC9C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90E3276A387B0033CC9C /* SettingsView.swift */; };
 		78CC90E9276A40010033CC9C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CC90E8276A40010033CC9C /* HealthKit.framework */; };
 		78CC90EB276A42260033CC9C /* HealthKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90EA276A42260033CC9C /* HealthKitHelper.swift */; };
 		78CC90EF276A5ADB0033CC9C /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90EE276A5ADB0033CC9C /* AlertItem.swift */; };
@@ -41,8 +40,7 @@
 		609EB0EAB846E7893728FC7A /* Pods_Hey_Hydrate_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hey_Hydrate_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78664356276B9BFB008ED474 /* Hey-Hydrate-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Hey-Hydrate-iOS-Info.plist"; sourceTree = "<group>"; };
 		788425862769ECC20085660E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		78CC90E3276A387B0033CC9C /* DailyGoalSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalSheet.swift; sourceTree = "<group>"; };
-		78CC90E5276A38880033CC9C /* CupSizeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupSizeSheet.swift; sourceTree = "<group>"; };
+		78CC90E3276A387B0033CC9C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		78CC90E7276A40010033CC9C /* Hey! Hydrate! (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hey! Hydrate! (iOS).entitlements"; sourceTree = "<group>"; };
 		78CC90E8276A40010033CC9C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		78CC90EA276A42260033CC9C /* HealthKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitHelper.swift; sourceTree = "<group>"; };
@@ -99,13 +97,12 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		78CC90E2276A38630033CC9C /* Sheets */ = {
+		78CC90E2276A38630033CC9C /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				78CC90E3276A387B0033CC9C /* DailyGoalSheet.swift */,
-				78CC90E5276A38880033CC9C /* CupSizeSheet.swift */,
+				78CC90E3276A387B0033CC9C /* SettingsView.swift */,
 			);
-			path = Sheets;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		78CC90ED276A5AC90033CC9C /* Alerts */ = {
@@ -120,6 +117,7 @@
 		78CC90F5276A70250033CC9C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				78CC90E2276A38630033CC9C /* Settings */,
 				78CC90F6276A70310033CC9C /* ContentView */,
 			);
 			path = Views;
@@ -151,7 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				78CC90F5276A70250033CC9C /* Views */,
-				78CC90E2276A38630033CC9C /* Sheets */,
 				788425852769ECAF0085660E /* Utilities */,
 				78E239A12768F2FD0058EE36 /* Assets.xcassets */,
 				78E2399F2768F2FC0058EE36 /* HeyHydrateApp.swift */,
@@ -349,11 +346,10 @@
 			files = (
 				78CC90F1276A5AF20033CC9C /* AlertContext.swift in Sources */,
 				788425872769ECC20085660E /* Utilities.swift in Sources */,
-				78CC90E6276A38880033CC9C /* CupSizeSheet.swift in Sources */,
 				78E239C92768F2FD0058EE36 /* ContentView.swift in Sources */,
 				78E239E02768F4200058EE36 /* AddWaterDrankView.swift in Sources */,
 				78E239DD2768F3EB0058EE36 /* WaterDrankIdicatorView.swift in Sources */,
-				78CC90E4276A387B0033CC9C /* DailyGoalSheet.swift in Sources */,
+				78CC90E4276A387B0033CC9C /* SettingsView.swift in Sources */,
 				78CC90F8276A70410033CC9C /* ContentViewModel.swift in Sources */,
 				78CC90EB276A42260033CC9C /* HealthKitHelper.swift in Sources */,
 				78CC90EF276A5ADB0033CC9C /* AlertItem.swift in Sources */,
