@@ -20,7 +20,7 @@ struct ContentView: View {
                 Button {
                     self.viewModel.showPopover = true
                 } label: {
-                    Image(systemName: "flag")
+                    Image(systemName: "gear")
                 }
                 .padding()
                 .sheet(
@@ -31,7 +31,11 @@ struct ContentView: View {
                             goal: viewModel.goal
                         )
                     }) { // swiftlint:disable:this multiple_closures_with_trailing_closure
-                    DailyGoalSheet(goal: $viewModel.goal, isPresented: $viewModel.showPopover)
+                        SettingsView(
+                            goal: $viewModel.goal,
+                            cupSize: $viewModel.cupSize,
+                            isPresented: $viewModel.showPopover
+                        )
                 }
 
             }
@@ -47,14 +51,17 @@ struct ContentView: View {
             AddWaterDrankView(
                 percentageDrank: $viewModel.percentageDrank,
                 waterDrank: $hkHelper.waterAmount,
-                goal: $viewModel.goal
+                goal: $viewModel.goal,
+                cupSize: $viewModel.cupSize
             )
             Spacer()
         }
         .onAppear {
-            hkHelper.autorizeHealthKit()
-            viewModel.percentageDrank = calculatePercentageDrank(waterDrank: hkHelper.waterAmount, goal: viewModel.goal)
+            hkHelper.setupHealthKit()
         }
+        .onChange(of: hkHelper.waterAmount, perform: { _ in
+            viewModel.percentageDrank = calculatePercentageDrank(waterDrank: hkHelper.waterAmount, goal: viewModel.goal)
+        })
         .alert(item: $hkHelper.alertItem, content: { alertItem in
             Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
         })

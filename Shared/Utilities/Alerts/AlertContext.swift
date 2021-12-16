@@ -12,7 +12,7 @@ struct AlertContext {
     // MARK: HealthKit errors
     static let unableToAccessHealthKit = AlertItem(
         title: Text("Access denied"),
-        message: Text("Unable to retrieve records from HealthKit.\nPlease give Hey! Hydrate! access to HealthKit."),
+        message: Text("Unable to retrieve records from HealthKit. Please give Hey! Hydrate! access to HealthKit."),
         dismissButton: .default(Text("Ok"))
     )
 

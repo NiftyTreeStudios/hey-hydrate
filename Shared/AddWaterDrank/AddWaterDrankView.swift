@@ -11,8 +11,7 @@ struct AddWaterDrankView: View {
     @Binding var percentageDrank: Double
     @Binding var waterDrank: Int
     @Binding var goal: Int
-    @AppStorage("cupSize") var cupSize: Int = 200
-    @State private var pickCupSheetShown: Bool = false
+    @Binding var cupSize: Int
 
     @EnvironmentObject var hkHelper: HealthKitHelper
 
@@ -29,28 +28,20 @@ struct AddWaterDrankView: View {
                     Image(systemName: "minus")
                 }
                 Button {
-                    self.pickCupSheetShown = true
+                    waterDrank += cupSize
+                    percentageDrank = calculatePercentageDrank(waterDrank: waterDrank, goal: goal)
+                    hkHelper.updateWaterAmount(waterAmount: cupSize)
                 } label: {
-                    Text("\(cupSize)")
-                        .font(.title)
-                }
+                    Text("Add \(cupSize) ml")
+                        .foregroundColor(.white)
+                        .padding()
+                }.background(Capsule().foregroundColor(.blue))
                 Button {
                     cupSize += 50
                 } label: {
                     Image(systemName: "plus")
                 }
             }
-            Button {
-                waterDrank += cupSize
-                percentageDrank = calculatePercentageDrank(waterDrank: waterDrank, goal: goal)
-                hkHelper.updateWaterAmount(waterAmount: cupSize)
-            } label: {
-                Text("Add water")
-                    .foregroundColor(.white)
-                    .padding()
-            }.background(Capsule().foregroundColor(.blue))
-        }.sheet(isPresented: $pickCupSheetShown) {
-            CupSizeSheet(cupSize: $cupSize, isPresented: $pickCupSheetShown)
         }
     }
 }
@@ -60,7 +51,8 @@ struct AddWaterDrankView_Previews: PreviewProvider {
         AddWaterDrankView(
             percentageDrank: .constant(30),
             waterDrank: .constant(500),
-            goal: .constant(2000)
+            goal: .constant(2000),
+            cupSize: .constant(500)
         )
     }
 }
