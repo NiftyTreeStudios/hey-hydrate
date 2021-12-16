@@ -35,9 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F1379C27AA9C38AD7F02D9B /* Pods-Hey-Hydrate-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey-Hydrate-iOS.release.xcconfig"; path = "Target Support Files/Pods-Hey-Hydrate-iOS/Pods-Hey-Hydrate-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		31E6AD51A6B6520D81B112DC /* Pods-Hey-Hydrate-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey-Hydrate-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Hey-Hydrate-iOS/Pods-Hey-Hydrate-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		3FB46789D55885B24A9FB538 /* Pods-Hey-Hydrate-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey-Hydrate-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Hey-Hydrate-iOS/Pods-Hey-Hydrate-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		609EB0EAB846E7893728FC7A /* Pods_Hey_Hydrate_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hey_Hydrate_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F05F5DAFC76B148910D4560 /* Pods-Hey-Hydrate-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey-Hydrate-iOS.release.xcconfig"; path = "Target Support Files/Pods-Hey-Hydrate-iOS/Pods-Hey-Hydrate-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		788425862769ECC20085660E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		78CC90E3276A387B0033CC9C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		78CC90E7276A40010033CC9C /* Hey! Hydrate! (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hey! Hydrate! (iOS).entitlements"; sourceTree = "<group>"; };
@@ -193,8 +193,8 @@
 		7939FE2A29B1D55185942758 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				31E6AD51A6B6520D81B112DC /* Pods-Hey-Hydrate-iOS.debug.xcconfig */,
-				2F1379C27AA9C38AD7F02D9B /* Pods-Hey-Hydrate-iOS.release.xcconfig */,
+				3FB46789D55885B24A9FB538 /* Pods-Hey-Hydrate-iOS.debug.xcconfig */,
+				6F05F5DAFC76B148910D4560 /* Pods-Hey-Hydrate-iOS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -488,7 +488,7 @@
 		};
 		78E239D02768F2FD0058EE36 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31E6AD51A6B6520D81B112DC /* Pods-Hey-Hydrate-iOS.debug.xcconfig */;
+			baseConfigurationReference = 3FB46789D55885B24A9FB538 /* Pods-Hey-Hydrate-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -525,7 +525,7 @@
 		};
 		78E239D12768F2FD0058EE36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F1379C27AA9C38AD7F02D9B /* Pods-Hey-Hydrate-iOS.release.xcconfig */;
+			baseConfigurationReference = 6F05F5DAFC76B148910D4560 /* Pods-Hey-Hydrate-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
