@@ -65,6 +65,9 @@ struct ContentView: View {
         .alert(item: $hkHelper.alertItem, content: { alertItem in
             Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
         })
+        .refreshable {
+            hkHelper.setupHealthKit()
+        }
     }
 }
 
