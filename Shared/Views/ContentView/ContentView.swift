@@ -12,6 +12,7 @@ struct ContentView: View {
 
     @StateObject private var viewModel = ContentViewModel()
     @EnvironmentObject var hkHelper: HealthKitHelper
+    @Environment(\.scenePhase) var scenePhase
 
     var body: some View {
         VStack {
@@ -56,18 +57,15 @@ struct ContentView: View {
             )
             Spacer()
         }
-        .onAppear {
-            hkHelper.setupHealthKit()
-        }
         .onChange(of: hkHelper.waterAmount, perform: { _ in
             viewModel.percentageDrank = calculatePercentageDrank(waterDrank: hkHelper.waterAmount, goal: viewModel.goal)
+        })
+        .onChange(of: scenePhase, perform: { _ in
+            hkHelper.setupHealthKit()
         })
         .alert(item: $hkHelper.alertItem, content: { alertItem in
             Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
         })
-        .refreshable {
-            hkHelper.setupHealthKit()
-        }
     }
 }
 
