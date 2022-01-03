@@ -17,7 +17,14 @@ struct ContentView: View {
     var body: some View {
         VStack {
             HStack {
+                Button {
+                    hkHelper.setupHealthKit()
+                } label: {
+                    Image(systemName: "arrow.clockwise")
+                }.padding()
+
                 Spacer()
+
                 Button {
                     self.viewModel.showPopover = true
                 } label: {
