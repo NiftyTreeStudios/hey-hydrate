@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SettingsView: View {
 
+    @State private var cupSizeString: String = ""
+    @FocusState private var cupSizeTextFieldFocused: Bool
     @Binding var goal: Int
     @Binding var cupSize: Int
     @Binding var isPresented: Bool
@@ -37,20 +39,29 @@ struct SettingsView: View {
                         }
                     }
                 }.pickerStyle(.wheel)
-                Text("Cup size: \(cupSize)")
-                Picker("\(cupSize)", selection: $cupSize) {
-                    ForEach(0 ..< 5001) { size in
-                        if size <= 500 && (size % 10) == 0 {
-                            Text("\(size)")
-                        } else if size <= 1000 && (size % 50) == 0 {
-                            Text("\(size)")
-                        } else if size <= 2500 && (size % 100) == 0 {
-                            Text("\(size)")
-                        } else if (size % 250) == 0 {
-                            Text("\(size)")
+                Text("Enter cup size:")
+                HStack {
+                    TextField(
+                        "Cup size",
+                        text: $cupSizeString,
+                        prompt: Text("\(cupSize)")
+                    )
+                        .keyboardType(.numberPad)
+                        .focused($cupSizeTextFieldFocused)
+
+                    Button {
+                        cupSizeTextFieldFocused = false
+                        print(cupSizeString)
+                        if let convertedCupSizeString = Int(cupSizeString) {
+                            cupSize = convertedCupSizeString
+                        } else {
+                            print("Failed to convert the inputted cup size to a number.")
                         }
+                    } label: {
+                        Text("Done")
                     }
-                }.pickerStyle(.wheel)
+
+                }
             }
         }
     }
