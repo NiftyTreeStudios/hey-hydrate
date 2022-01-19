@@ -9,8 +9,11 @@ import SwiftUI
 import HealthKit
 
 final class HealthKitHelper: ObservableObject {
+
     @AppStorage("previousAppUse") var previousAppUse: Double = 0
-    @Published var waterAmount: Int = 0
+    @AppStorage("unitsUsed") var unitsUsed: FluidUnit = .liters
+
+    @Published var waterAmount: Double = 0
     @Published var alertItem: AlertItem?
 
     let healthStore = HKHealthStore()
@@ -66,7 +69,7 @@ final class HealthKitHelper: ObservableObject {
         }
     }
 
-    func getWater(completion: @escaping (Int) -> Void) {
+    func getWater(completion: @escaping (Double) -> Void) {
         let waterQuantityType = HKQuantityType.quantityType(forIdentifier: .dietaryWater)!
         let now = Date()
         let startOfDay = Calendar.current.startOfDay(for: now)
@@ -88,10 +91,10 @@ final class HealthKitHelper: ObservableObject {
             }
             result!.enumerateStatistics(from: startOfDay, to: now) { statistics, _ in
                 if let sum = statistics.sumQuantity() {
-                    resultCount = sum.doubleValue(for: HKUnit.liter())
+                    resultCount = sum.doubleValue(for: getHKUnitFor(self.unitsUsed))
                 }
                 DispatchQueue.main.async {
-                    completion(Int(resultCount * 1000))
+                    completion(resultCount)
                 }
             }
         }
@@ -101,9 +104,9 @@ final class HealthKitHelper: ObservableObject {
                 self.alertItem = AlertContext.unableToGetHealthRecords
             }
             if let sum = statistics?.sumQuantity() {
-                let resultCount = sum.doubleValue(for: HKUnit.liter())
+                let resultCount = sum.doubleValue(for: getHKUnitFor(self.unitsUsed))
                 DispatchQueue.main.async {
-                    completion(Int(resultCount * 1000))
+                    completion(resultCount)
                 }
             }
         }
@@ -111,13 +114,16 @@ final class HealthKitHelper: ObservableObject {
         healthStore.execute(query)
     }
 
-    func updateWaterAmount(waterAmount: Int) {
+    func updateWaterAmount(waterAmount: Double) {
         let now = Date()
         let startOfDay = Calendar.current.startOfDay(for: now)
         let waterQuantityType = HKQuantityType.quantityType(forIdentifier: .dietaryWater)!
         let waterAmountToSave = HKQuantitySample(
             type: waterQuantityType,
-            quantity: HKQuantity(unit: .liter(), doubleValue: Double(waterAmount) / 1000),
+            quantity: HKQuantity(
+                unit: getHKUnitFor(self.unitsUsed),
+                doubleValue: waterAmount
+            ),
             start: startOfDay,
             end: now
         )

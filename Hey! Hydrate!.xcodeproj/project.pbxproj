@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		496255739FD78AE1CD4D8150 /* Pods_Hey_Hydrate_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609EB0EAB846E7893728FC7A /* Pods_Hey_Hydrate_iOS.framework */; };
 		788425872769ECC20085660E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788425862769ECC20085660E /* Utilities.swift */; };
+		78BD84722795C877004671C5 /* FluidUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BD84712795C877004671C5 /* FluidUnits.swift */; };
+		78BD84752796BF3C004671C5 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78BD84742796BF3C004671C5 /* DoubleExtension.swift */; };
 		78CC90E4276A387B0033CC9C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90E3276A387B0033CC9C /* SettingsView.swift */; };
 		78CC90E9276A40010033CC9C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CC90E8276A40010033CC9C /* HealthKit.framework */; };
 		78CC90EB276A42260033CC9C /* HealthKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90EA276A42260033CC9C /* HealthKitHelper.swift */; };
@@ -39,6 +41,8 @@
 		609EB0EAB846E7893728FC7A /* Pods_Hey_Hydrate_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hey_Hydrate_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F05F5DAFC76B148910D4560 /* Pods-Hey-Hydrate-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey-Hydrate-iOS.release.xcconfig"; path = "Target Support Files/Pods-Hey-Hydrate-iOS/Pods-Hey-Hydrate-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		788425862769ECC20085660E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		78BD84712795C877004671C5 /* FluidUnits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluidUnits.swift; sourceTree = "<group>"; };
+		78BD84742796BF3C004671C5 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		78CC90E3276A387B0033CC9C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		78CC90E7276A40010033CC9C /* Hey! Hydrate! (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hey! Hydrate! (iOS).entitlements"; sourceTree = "<group>"; };
 		78CC90E8276A40010033CC9C /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -90,10 +94,20 @@
 			isa = PBXGroup;
 			children = (
 				78CC90ED276A5AC90033CC9C /* Alerts */,
+				78BD84732796BF2B004671C5 /* Extensions */,
 				788425862769ECC20085660E /* Utilities.swift */,
 				78CC90EA276A42260033CC9C /* HealthKitHelper.swift */,
+				78BD84712795C877004671C5 /* FluidUnits.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		78BD84732796BF2B004671C5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				78BD84742796BF3C004671C5 /* DoubleExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		78CC90E2276A38630033CC9C /* Settings */ = {
@@ -342,9 +356,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78BD84752796BF3C004671C5 /* DoubleExtension.swift in Sources */,
 				78CC90F1276A5AF20033CC9C /* AlertContext.swift in Sources */,
 				788425872769ECC20085660E /* Utilities.swift in Sources */,
 				78E239C92768F2FD0058EE36 /* ContentView.swift in Sources */,
+				78BD84722795C877004671C5 /* FluidUnits.swift in Sources */,
 				78E239E02768F4200058EE36 /* AddWaterDrankView.swift in Sources */,
 				78E239DD2768F3EB0058EE36 /* WaterDrankIdicatorView.swift in Sources */,
 				78CC90E4276A387B0033CC9C /* SettingsView.swift in Sources */,
@@ -513,7 +529,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.7;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate;
 				PRODUCT_NAME = "Hey! Hydrate!";
 				SDKROOT = iphoneos;
@@ -550,7 +566,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.7;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate;
 				PRODUCT_NAME = "Hey! Hydrate!";
 				SDKROOT = iphoneos;

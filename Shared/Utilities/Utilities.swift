@@ -15,6 +15,6 @@ import Foundation
  
  - Returns: the percentage of water drank from the daily goal.
  */
-func calculatePercentageDrank(waterDrank: Int, goal: Int) -> Double {
-    return Double(waterDrank) / Double(goal)
+func calculatePercentageDrank(waterDrank: Double, goal: Double) -> Double {
+    return waterDrank / goal
 }

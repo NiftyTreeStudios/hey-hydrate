@@ -9,14 +9,14 @@ import SwiftUI
 
 struct WaterDrankIdicatorView: View {
     @Binding var percentageDrank: Double
-    @Binding var goal: Int
-    @Binding var waterDrank: Int
+    @Binding var goal: Double
+    @Binding var waterDrank: Double
 
     @EnvironmentObject var hkHelper: HealthKitHelper
 
     var body: some View {
         ZStack {
-            Text("\(waterDrank)")
+            Text("\(hkHelper.unitsUsed == .liters ? waterDrank.literToMl() : waterDrank)")
                 .font(.title)
         }
         .background(WaterDrankBackground(percentageDrank: $percentageDrank))
