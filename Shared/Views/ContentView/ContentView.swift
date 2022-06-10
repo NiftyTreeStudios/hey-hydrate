@@ -14,6 +14,7 @@ struct ContentView: View {
 
     var body: some View {
         //NavigationView {
+        ZStack {
             HydrationView()
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationTitle("Hey! Hydrate!")
@@ -26,6 +27,12 @@ struct ContentView: View {
                         }
                     }
                 }
+            Button {
+                hkHelper.setupHealthKit()
+            } label: {
+                Image(systemName: "arrow.clockwise")
+            }.position(x: 30, y: 30)
+        }
         //}
         .onChange(of: scenePhase, perform: { _ in
             hkHelper.setupHealthKit()
@@ -56,7 +63,7 @@ struct HydrationView: View {
                     goal: $viewModel.goal,
                     cupSize: $viewModel.cupSize
                 )
-            }.position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+            }.position(x: geometry.size.width / 2, y: geometry.size.height / 2 + 50)
         }
         .onChange(of: hkHelper.waterAmount, perform: { _ in
             viewModel.percentageDrank = calculatePercentageDrank(waterDrank: hkHelper.waterAmount, goal: viewModel.goal)
