@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34B6827C2859FBF500B772DF /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B682632859C36900B772DF /* WidgetKit.framework */; };
+		34B6827D2859FBF500B772DF /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34B682652859C36900B772DF /* SwiftUI.framework */; };
+		34B682802859FBF500B772DF /* PercentageDrankWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B6827F2859FBF500B772DF /* PercentageDrankWidget.swift */; };
+		34B682822859FBF700B772DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34B682812859FBF700B772DF /* Assets.xcassets */; };
+		34B682862859FBF700B772DF /* PercentageDrankWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 34B6827B2859FBF500B772DF /* PercentageDrankWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		34B6828B2859FC6F00B772DF /* PercentageDrankWidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B6828A2859FC6F00B772DF /* PercentageDrankWidgetContent.swift */; };
+		34B6828C2859FC6F00B772DF /* PercentageDrankWidgetContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B6828A2859FC6F00B772DF /* PercentageDrankWidgetContent.swift */; };
+		34B68290285A029500B772DF /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B6828F285A029500B772DF /* FileManager+Ext.swift */; };
+		34B68291285A029500B772DF /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B6828F285A029500B772DF /* FileManager+Ext.swift */; };
 		34C5B4BE28536BAB003C3FF6 /* HHTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C5B4BD28536BAB003C3FF6 /* HHTabView.swift */; };
 		496255739FD78AE1CD4D8150 /* Pods_Hey_Hydrate_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609EB0EAB846E7893728FC7A /* Pods_Hey_Hydrate_iOS.framework */; };
 		788425872769ECC20085660E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788425862769ECC20085660E /* Utilities.swift */; };
@@ -26,6 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		34B682842859FBF700B772DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78E2399A2768F2FB0058EE36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34B6827A2859FBF500B772DF;
+			remoteInfo = PercentageDrankWidgetExtension;
+		};
 		78E239B42768F2FD0058EE36 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78E2399A2768F2FB0058EE36 /* Project object */;
@@ -35,7 +51,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		34B682732859C36A00B772DF /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				34B682862859FBF700B772DF /* PercentageDrankWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		34B682632859C36900B772DF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		34B682652859C36900B772DF /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		34B6827B2859FBF500B772DF /* PercentageDrankWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PercentageDrankWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		34B6827F2859FBF500B772DF /* PercentageDrankWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageDrankWidget.swift; sourceTree = "<group>"; };
+		34B682812859FBF700B772DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		34B682832859FBF700B772DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34B6828A2859FC6F00B772DF /* PercentageDrankWidgetContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageDrankWidgetContent.swift; sourceTree = "<group>"; };
+		34B6828F285A029500B772DF /* FileManager+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Ext.swift"; sourceTree = "<group>"; };
 		34C5B4BD28536BAB003C3FF6 /* HHTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHTabView.swift; sourceTree = "<group>"; };
 		3FB46789D55885B24A9FB538 /* Pods-Hey-Hydrate-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey-Hydrate-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Hey-Hydrate-iOS/Pods-Hey-Hydrate-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		609EB0EAB846E7893728FC7A /* Pods_Hey_Hydrate_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hey_Hydrate_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +98,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		34B682782859FBF500B772DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34B6827D2859FBF500B772DF /* SwiftUI.framework in Frameworks */,
+				34B6827C2859FBF500B772DF /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78E239A32768F2FD0058EE36 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -84,8 +131,29 @@
 			children = (
 				78CC90E8276A40010033CC9C /* HealthKit.framework */,
 				609EB0EAB846E7893728FC7A /* Pods_Hey_Hydrate_iOS.framework */,
+				34B682632859C36900B772DF /* WidgetKit.framework */,
+				34B682652859C36900B772DF /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		34B6827E2859FBF500B772DF /* PercentageDrankWidget */ = {
+			isa = PBXGroup;
+			children = (
+				34B6827F2859FBF500B772DF /* PercentageDrankWidget.swift */,
+				34B682812859FBF700B772DF /* Assets.xcassets */,
+				34B682832859FBF700B772DF /* Info.plist */,
+				34B6828A2859FC6F00B772DF /* PercentageDrankWidgetContent.swift */,
+			);
+			path = PercentageDrankWidget;
+			sourceTree = "<group>";
+		};
+		34B6828E285A027C00B772DF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				34B6828F285A029500B772DF /* FileManager+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		34C5B4BC28536B87003C3FF6 /* HHTabView */ = {
@@ -148,6 +216,7 @@
 				78CC90E7276A40010033CC9C /* Hey! Hydrate! (iOS).entitlements */,
 				78E2399E2768F2FC0058EE36 /* Shared */,
 				78E239B62768F2FD0058EE36 /* Tests iOS */,
+				34B6827E2859FBF500B772DF /* PercentageDrankWidget */,
 				78E239A72768F2FD0058EE36 /* Products */,
 				7939FE2A29B1D55185942758 /* Pods */,
 				01733FDD023C499A94818DCB /* Frameworks */,
@@ -157,6 +226,7 @@
 		78E2399E2768F2FC0058EE36 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				34B6828E285A027C00B772DF /* Extensions */,
 				78CC90F5276A70250033CC9C /* Views */,
 				788425852769ECAF0085660E /* Utilities */,
 				78E239A12768F2FD0058EE36 /* Assets.xcassets */,
@@ -172,6 +242,7 @@
 			children = (
 				78E239A62768F2FD0058EE36 /* Hey! Hydrate!.app */,
 				78E239B32768F2FD0058EE36 /* Tests iOS.xctest */,
+				34B6827B2859FBF500B772DF /* PercentageDrankWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -213,6 +284,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		34B6827A2859FBF500B772DF /* PercentageDrankWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34B682872859FBF700B772DF /* Build configuration list for PBXNativeTarget "PercentageDrankWidgetExtension" */;
+			buildPhases = (
+				34B682772859FBF500B772DF /* Sources */,
+				34B682782859FBF500B772DF /* Frameworks */,
+				34B682792859FBF500B772DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PercentageDrankWidgetExtension;
+			productName = PercentageDrankWidgetExtension;
+			productReference = 34B6827B2859FBF500B772DF /* PercentageDrankWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		78E239A52768F2FD0058EE36 /* Hey-Hydrate-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78E239CF2768F2FD0058EE36 /* Build configuration list for PBXNativeTarget "Hey-Hydrate-iOS" */;
@@ -222,10 +310,12 @@
 				78E239A32768F2FD0058EE36 /* Frameworks */,
 				78E239A42768F2FD0058EE36 /* Resources */,
 				78180E1D276A01F70093CCBF /* ShellScript */,
+				34B682732859C36A00B772DF /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				34B682852859FBF700B772DF /* PBXTargetDependency */,
 			);
 			name = "Hey-Hydrate-iOS";
 			productName = "Hey! Hydrate! (iOS)";
@@ -257,9 +347,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					34B6827A2859FBF500B772DF = {
+						CreatedOnToolsVersion = 14.0;
+					};
 					78E239A52768F2FD0058EE36 = {
 						CreatedOnToolsVersion = 13.2;
 					};
@@ -284,11 +377,20 @@
 			targets = (
 				78E239A52768F2FD0058EE36 /* Hey-Hydrate-iOS */,
 				78E239B22768F2FD0058EE36 /* Tests iOS */,
+				34B6827A2859FBF500B772DF /* PercentageDrankWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		34B682792859FBF500B772DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34B682822859FBF700B772DF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78E239A42768F2FD0058EE36 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,12 +451,24 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		34B682772859FBF500B772DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34B68291285A029500B772DF /* FileManager+Ext.swift in Sources */,
+				34B6828C2859FC6F00B772DF /* PercentageDrankWidgetContent.swift in Sources */,
+				34B682802859FBF500B772DF /* PercentageDrankWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78E239A22768F2FD0058EE36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				78CC90F1276A5AF20033CC9C /* AlertContext.swift in Sources */,
 				788425872769ECC20085660E /* Utilities.swift in Sources */,
+				34B68290285A029500B772DF /* FileManager+Ext.swift in Sources */,
+				34B6828B2859FC6F00B772DF /* PercentageDrankWidgetContent.swift in Sources */,
 				78E239C92768F2FD0058EE36 /* ContentView.swift in Sources */,
 				78E239E02768F4200058EE36 /* AddWaterDrankView.swift in Sources */,
 				78E239DD2768F3EB0058EE36 /* WaterDrankIndicatorView.swift in Sources */,
@@ -379,6 +493,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		34B682852859FBF700B772DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34B6827A2859FBF500B772DF /* PercentageDrankWidgetExtension */;
+			targetProxy = 34B682842859FBF700B772DF /* PBXContainerItemProxy */;
+		};
 		78E239B52768F2FD0058EE36 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 78E239A52768F2FD0058EE36 /* Hey-Hydrate-iOS */;
@@ -387,6 +506,63 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		34B682882859FBF700B772DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LBHT4Q3RSF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PercentageDrankWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PercentageDrankWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate.PercentageDrankWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		34B682892859FBF700B772DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LBHT4Q3RSF;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PercentageDrankWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = PercentageDrankWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate.PercentageDrankWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		78E239CD2768F2FD0058EE36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -506,6 +682,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3FB46789D55885B24A9FB538 /* Pods-Hey-Hydrate-iOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hey! Hydrate! (iOS).entitlements";
@@ -548,6 +725,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6F05F5DAFC76B148910D4560 /* Pods-Hey-Hydrate-iOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hey! Hydrate! (iOS).entitlements";
@@ -631,6 +809,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		34B682872859FBF700B772DF /* Build configuration list for PBXNativeTarget "PercentageDrankWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34B682882859FBF700B772DF /* Debug */,
+				34B682892859FBF700B772DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		78E2399D2768F2FB0058EE36 /* Build configuration list for PBXProject "Hey! Hydrate!" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
