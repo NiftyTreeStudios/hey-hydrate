@@ -16,52 +16,42 @@ struct SettingsView: View {
     @Binding var isPresented: Bool
 
     var body: some View {
-        VStack {
-            ZStack {
-                Capsule().frame(width: 75, height: 5, alignment: .center)
-                    .foregroundColor(.gray)
-                    .opacity(0.5)
-                HStack {
-                    Spacer()
-                    Button {
-                        self.isPresented = false
-                    } label: {
-                        Text("Done")
-                    }.padding()
-                }
-            }
-            List {
-                Text("Your daily goal: \(goal)")
-                Picker("\(goal)", selection: $goal) {
-                    ForEach(0 ..< 5001) { size in
-                        if (size % 250) == 0 {
-                            Text("\(size)")
+        NavigationView {
+            VStack {
+                List {
+                    Text("Your daily goal: \(goal)")
+                    Picker("\(goal)", selection: $goal) {
+                        ForEach(0 ..< 5001) { size in
+                            if (size % 250) == 0 {
+                                Text("\(size)")
+                            }
                         }
-                    }
-                }.pickerStyle(.wheel)
-                Text("Enter cup size:")
-                HStack {
-                    TextField(
-                        "Cup size",
-                        text: $cupSizeString,
-                        prompt: Text("\(cupSize)")
-                    )
+                    }.pickerStyle(.wheel)
+                    Text("Enter cup size:")
+                    HStack {
+                        TextField(
+                            "Cup size",
+                            text: $cupSizeString,
+                            prompt: Text("\(cupSize)")
+                        )
                         .keyboardType(.numberPad)
                         .focused($cupSizeTextFieldFocused)
 
-                    Button {
-                        cupSizeTextFieldFocused = false
-                        print(cupSizeString)
-                        if let convertedCupSizeString = Int(cupSizeString) {
-                            cupSize = convertedCupSizeString
-                        } else {
-                            print("Failed to convert the inputted cup size to a number.")
-                        }
-                    } label: {
-                        Text("Done")
+                        Button {
+                            cupSizeTextFieldFocused = false
+                            print(cupSizeString)
+                            if let convertedCupSizeString = Int(cupSizeString) {
+                                cupSize = convertedCupSizeString
+                            } else {
+                                print("Failed to convert the inputted cup size to a number.")
+                            }
+                        } label: {
+                            Text("Done")
+                        }.disabled(cupSizeString.isEmpty)
                     }
-
                 }
+                //.navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("Settings")
             }
         }
     }
