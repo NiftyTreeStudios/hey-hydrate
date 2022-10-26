@@ -8,7 +8,10 @@
 import Foundation
 
 extension FileManager {
-    static func sharedContainerURL() -> URL {
-        FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.niftytreestudios.heyhydrate.content")!
+    static var sharedContainerURL: URL {
+        let appGroupIdentifier = "group.com.niftytreestudios.heyhydrate.content"
+        guard let url = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroupIdentifier)
+        else { preconditionFailure("Expected a valid app group container") }
+        return url
     }
 }

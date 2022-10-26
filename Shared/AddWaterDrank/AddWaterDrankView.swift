@@ -53,7 +53,7 @@ struct AddWaterDrankView: View {
     }
 
     func writeWidgetContents(_ contents: PercentageDrankWidgetContent) {
-        let archiveURL = FileManager.sharedContainerURL()
+        let archiveURL = FileManager.sharedContainerURL
             .appendingPathComponent("contents.json")
         let encoder = JSONEncoder()
         if let dataToSave = try? encoder.encode(contents) {

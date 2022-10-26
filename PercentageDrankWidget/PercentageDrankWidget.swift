@@ -82,7 +82,7 @@ struct PercentageDrankWidget_Previews: PreviewProvider {
 func readContents() -> [PercentageDrankWidgetContent] {
     var contents: [PercentageDrankWidgetContent] = []
     let archiveURL =
-    FileManager.sharedContainerURL()
+    FileManager.sharedContainerURL
         .appendingPathComponent("contents.json")
     print(">>> \(archiveURL)")
 
@@ -92,6 +92,9 @@ func readContents() -> [PercentageDrankWidgetContent] {
             contents = try decoder.decode([PercentageDrankWidgetContent].self, from: codeData)
         } catch {
             print("Error: Can't decode contents")
+            if let data = try? Data(contentsOf: archiveURL) {
+                print("Contents: \(data.description)")
+            }
         }
     }
     return contents
