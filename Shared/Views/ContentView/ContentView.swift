@@ -13,7 +13,6 @@ struct ContentView: View {
     @Environment(\.scenePhase) var scenePhase
 
     var body: some View {
-        //NavigationView {
         ZStack {
             HydrationView()
                 .navigationBarTitleDisplayMode(.inline)
@@ -33,7 +32,6 @@ struct ContentView: View {
                 Image(systemName: "arrow.clockwise")
             }.position(x: 30, y: 30)
         }
-        //}
         .onChange(of: scenePhase, perform: { _ in
             hkHelper.setupHealthKit()
         })
