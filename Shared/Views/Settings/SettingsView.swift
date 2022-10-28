@@ -19,38 +19,21 @@ struct SettingsView: View {
         NavigationView {
             VStack {
                 List {
-                    Text("Your daily goal: \(goal)")
-                    Picker("\(goal)", selection: $goal) {
+                    Picker("Daily goal:", selection: $goal) {
                         ForEach(0 ..< 5001) { size in
                             if (size % 250) == 0 {
                                 Text("\(size)")
                             }
                         }
-                    }.pickerStyle(.wheel)
-                    Text("Enter cup size:")
-                    HStack {
-                        TextField(
-                            "Cup size",
-                            text: $cupSizeString,
-                            prompt: Text("\(cupSize)")
-                        )
-                        .keyboardType(.numberPad)
-                        .focused($cupSizeTextFieldFocused)
-
-                        Button {
-                            cupSizeTextFieldFocused = false
-                            print(cupSizeString)
-                            if let convertedCupSizeString = Int(cupSizeString) {
-                                cupSize = convertedCupSizeString
-                            } else {
-                                print("Failed to convert the inputted cup size to a number.")
+                    }.pickerStyle(.menu)
+                    Picker("Cup size:", selection: $cupSize) {
+                        ForEach(0 ..< 5001) { size in
+                            if (size % 50) == 0 {
+                                Text("\(size)")
                             }
-                        } label: {
-                            Text("Done")
-                        }.disabled(cupSizeString.isEmpty)
-                    }
+                        }
+                    }.pickerStyle(.menu)
                 }
-                //.navigationBarTitleDisplayMode(.inline)
                 .navigationTitle("Settings")
             }
         }
