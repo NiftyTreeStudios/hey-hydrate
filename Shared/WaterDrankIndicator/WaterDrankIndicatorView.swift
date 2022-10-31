@@ -1,5 +1,5 @@
 //
-//  WaterDrankIdicatorView.swift
+//  WaterDrankIndicatorView.swift
 //  Hey! Hydrate! (iOS)
 //
 //  Created by Iiro Alhonen on 14.12.21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WaterDrankIdicatorView: View {
+struct WaterDrankIndicatorView: View {
     @Binding var percentageDrank: Double
     @Binding var goal: Int
     @Binding var waterDrank: Int
@@ -63,7 +63,6 @@ struct WaterDrankBackground: View {
         }
     }
 }
-
 struct Wave: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
@@ -99,8 +98,8 @@ struct Wave: Shape {
     }
 }
 
-struct WaterDrankIdicatorView_Previews: PreviewProvider {
+struct WaterDrankIndicatorView_Previews: PreviewProvider {
     static var previews: some View {
-        WaterDrankIdicatorView(percentageDrank: .constant(30), goal: .constant(5000), waterDrank: .constant(500))
+        WaterDrankIndicatorView(percentageDrank: .constant(30), goal: .constant(5000), waterDrank: .constant(500))
     }
 }

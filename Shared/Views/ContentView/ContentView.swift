@@ -9,64 +9,29 @@ import SwiftUI
 import HealthKit
 
 struct ContentView: View {
-
-    @StateObject private var viewModel = ContentViewModel()
     @EnvironmentObject var hkHelper: HealthKitHelper
     @Environment(\.scenePhase) var scenePhase
 
     var body: some View {
-        VStack {
-            HStack {
-                Button {
-                    hkHelper.setupHealthKit()
-                } label: {
-                    Image(systemName: "arrow.clockwise")
-                }.padding()
-
-                Spacer()
-
-                Button {
-                    self.viewModel.showPopover = true
-                } label: {
-                    Image(systemName: "gear")
+        ZStack {
+            HydrationView()
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle("Hey! Hydrate!")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button {
+                            hkHelper.setupHealthKit()
+                        } label: {
+                            Image(systemName: "arrow.clockwise")
+                        }
+                    }
                 }
-                .padding()
-                .sheet(
-                    isPresented: $viewModel.showPopover,
-                    onDismiss: {
-                        viewModel.percentageDrank = calculatePercentageDrank(
-                            waterDrank: hkHelper.waterAmount,
-                            goal: viewModel.goal
-                        )
-                    }) { // swiftlint:disable:this multiple_closures_with_trailing_closure
-                        SettingsView(
-                            goal: $viewModel.goal,
-                            cupSize: $viewModel.cupSize,
-                            isPresented: $viewModel.showPopover
-                        )
-                }
-
-            }
-            Spacer()
-            // The water drank indicator
-            WaterDrankIdicatorView(
-                percentageDrank: $viewModel.percentageDrank,
-                goal: $viewModel.goal,
-                waterDrank: $hkHelper.waterAmount
-            )
-            Spacer()
-            // Add more water drank
-            AddWaterDrankView(
-                percentageDrank: $viewModel.percentageDrank,
-                waterDrank: $hkHelper.waterAmount,
-                goal: $viewModel.goal,
-                cupSize: $viewModel.cupSize
-            )
-            Spacer()
+            Button {
+                hkHelper.setupHealthKit()
+            } label: {
+                Image(systemName: "arrow.clockwise")
+            }.position(x: 30, y: 30)
         }
-        .onChange(of: hkHelper.waterAmount, perform: { _ in
-            viewModel.percentageDrank = calculatePercentageDrank(waterDrank: hkHelper.waterAmount, goal: viewModel.goal)
-        })
         .onChange(of: scenePhase, perform: { _ in
             hkHelper.setupHealthKit()
         })
@@ -76,8 +41,30 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+struct HydrationView: View {
+    @EnvironmentObject var viewModel: ContentViewModel
+    @EnvironmentObject var hkHelper: HealthKitHelper
+
+    var body: some View {
+        GeometryReader { geometry in
+            VStack(spacing: 150) {
+                // The water drank indicator
+                WaterDrankIndicatorView(
+                    percentageDrank: $viewModel.percentageDrank,
+                    goal: $viewModel.goal,
+                    waterDrank: $hkHelper.waterAmount
+                )
+                // Add more water drank
+                AddWaterDrankView(
+                    percentageDrank: $viewModel.percentageDrank,
+                    waterDrank: $hkHelper.waterAmount,
+                    goal: $viewModel.goal,
+                    cupSize: $viewModel.cupSize
+                )
+            }.position(x: geometry.size.width / 2, y: geometry.size.height / 2 + 50)
+        }
+        .onChange(of: hkHelper.waterAmount, perform: { _ in
+            viewModel.percentageDrank = calculatePercentageDrank(waterDrank: hkHelper.waterAmount, goal: viewModel.goal)
+        })
     }
 }

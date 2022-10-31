@@ -14,7 +14,7 @@ struct HeyHydrateApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(hkHelper)
+            HHTabView().environmentObject(hkHelper)
         }
     }
 }

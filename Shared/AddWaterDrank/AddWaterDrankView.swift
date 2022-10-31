@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct AddWaterDrankView: View {
     @Binding var percentageDrank: Double
@@ -31,6 +32,13 @@ struct AddWaterDrankView: View {
                     waterDrank += cupSize
                     percentageDrank = calculatePercentageDrank(waterDrank: waterDrank, goal: goal)
                     hkHelper.updateWaterAmount(waterAmount: cupSize)
+                    writeWidgetContents(
+                        PercentageDrankWidgetContent(
+                            percentageDrank: percentageDrank,
+                            goal: goal,
+                            waterDrank: waterDrank
+                        )
+                    )
                 } label: {
                     Text("Add \(cupSize) ml")
                         .foregroundColor(.white)
@@ -43,6 +51,21 @@ struct AddWaterDrankView: View {
                 }
             }
         }
+    }
+
+    func writeWidgetContents(_ contents: PercentageDrankWidgetContent) {
+        let archiveURL = FileManager.sharedContainerURL
+            .appendingPathComponent("contents.json")
+        let encoder = JSONEncoder()
+        if let dataToSave = try? encoder.encode(contents) {
+            do {
+                try dataToSave.write(to: archiveURL)
+            } catch {
+                print("Error: Can't write contents")
+                return
+            }
+        }
+        WidgetCenter.shared.reloadTimelines(ofKind: "PercentageDrankWidget")
     }
 }
 
