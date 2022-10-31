@@ -18,8 +18,14 @@ struct Provider: TimelineProvider {
         completion: @escaping (PercentageDrankWidgetContent) -> Void
     ) {
         print("ENTRY")
-        let entry = snapshotEntry
-        completion(entry)
+        if context.isPreview {
+            let entry = snapshotEntry
+            completion(entry)
+        } else {
+            var entry: PercentageDrankWidgetContent
+            entry = readContents().first ?? snapshotEntry
+            completion(entry)
+        }
     }
 
     func getTimeline(
@@ -27,7 +33,7 @@ struct Provider: TimelineProvider {
         completion: @escaping (Timeline<Entry>) -> Void
     ) {
         print("TIMELINE")
-        var entries: [PercentageDrankWidgetContent] = readContents()
+        let entries: [PercentageDrankWidgetContent] = readContents()
         print("ENTRIES: \(entries)")
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
