@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct AddWaterDrankView: View {
     @Binding var percentageDrank: Double
@@ -64,6 +65,7 @@ struct AddWaterDrankView: View {
                 return
             }
         }
+        WidgetCenter.shared.reloadTimelines(ofKind: "PercentageDrankWidget")
     }
 }
 
