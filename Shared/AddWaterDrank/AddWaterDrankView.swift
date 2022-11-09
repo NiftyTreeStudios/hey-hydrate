@@ -27,6 +27,8 @@ struct AddWaterDrankView: View {
                     }
                 } label: {
                     Image(systemName: "minus")
+                        .font(.title2)
+                        .padding()
                 }
                 Button {
                     waterDrank += cupSize
@@ -48,6 +50,8 @@ struct AddWaterDrankView: View {
                     cupSize += 50
                 } label: {
                     Image(systemName: "plus")
+                        .font(.title2)
+                        .padding()
                 }
             }
         }
