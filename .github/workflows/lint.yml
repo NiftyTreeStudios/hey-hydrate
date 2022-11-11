@@ -1,0 +1,21 @@
+name: Lint
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/lint.yml'
+      - '.swiftlint.yml'
+      - '**/*.swift'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Lint code using SwiftLint
+        uses: norio-nomura/action-swiftlint@9f4dcd7fd46b4e75d7935cf2f4df406d5cae3684 # release/3.2.1
+        env:
+          DIFF_BASE: ${{ github.base_ref }}
