@@ -17,7 +17,6 @@
 		34B68290285A029500B772DF /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B6828F285A029500B772DF /* FileManager+Ext.swift */; };
 		34B68291285A029500B772DF /* FileManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B6828F285A029500B772DF /* FileManager+Ext.swift */; };
 		34C5B4BE28536BAB003C3FF6 /* HHTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C5B4BD28536BAB003C3FF6 /* HHTabView.swift */; };
-		496255739FD78AE1CD4D8150 /* Pods_Hey_Hydrate_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 609EB0EAB846E7893728FC7A /* Pods_Hey_Hydrate_iOS.framework */; };
 		788425872769ECC20085660E /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788425862769ECC20085660E /* Utilities.swift */; };
 		78CC90E4276A387B0033CC9C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78CC90E3276A387B0033CC9C /* SettingsView.swift */; };
 		78CC90E9276A40010033CC9C /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78CC90E8276A40010033CC9C /* HealthKit.framework */; };
@@ -76,9 +75,6 @@
 		34B6828A2859FC6F00B772DF /* PercentageDrankWidgetContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageDrankWidgetContent.swift; sourceTree = "<group>"; };
 		34B6828F285A029500B772DF /* FileManager+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Ext.swift"; sourceTree = "<group>"; };
 		34C5B4BD28536BAB003C3FF6 /* HHTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHTabView.swift; sourceTree = "<group>"; };
-		3FB46789D55885B24A9FB538 /* Pods-Hey-Hydrate-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey-Hydrate-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Hey-Hydrate-iOS/Pods-Hey-Hydrate-iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		609EB0EAB846E7893728FC7A /* Pods_Hey_Hydrate_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hey_Hydrate_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F05F5DAFC76B148910D4560 /* Pods-Hey-Hydrate-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey-Hydrate-iOS.release.xcconfig"; path = "Target Support Files/Pods-Hey-Hydrate-iOS/Pods-Hey-Hydrate-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		788425862769ECC20085660E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		78CC90E3276A387B0033CC9C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		78CC90E7276A40010033CC9C /* Hey! Hydrate! (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hey! Hydrate! (iOS).entitlements"; sourceTree = "<group>"; };
@@ -113,7 +109,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				78CC90E9276A40010033CC9C /* HealthKit.framework in Frameworks */,
-				496255739FD78AE1CD4D8150 /* Pods_Hey_Hydrate_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				78CC90E8276A40010033CC9C /* HealthKit.framework */,
-				609EB0EAB846E7893728FC7A /* Pods_Hey_Hydrate_iOS.framework */,
 				34B682632859C36900B772DF /* WidgetKit.framework */,
 				34B682652859C36900B772DF /* SwiftUI.framework */,
 			);
@@ -220,7 +214,6 @@
 				78E239B62768F2FD0058EE36 /* Tests iOS */,
 				34B6827E2859FBF500B772DF /* PercentageDrankWidget */,
 				78E239A72768F2FD0058EE36 /* Products */,
-				7939FE2A29B1D55185942758 /* Pods */,
 				01733FDD023C499A94818DCB /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -274,15 +267,6 @@
 			path = AddWaterDrank;
 			sourceTree = "<group>";
 		};
-		7939FE2A29B1D55185942758 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3FB46789D55885B24A9FB538 /* Pods-Hey-Hydrate-iOS.debug.xcconfig */,
-				6F05F5DAFC76B148910D4560 /* Pods-Hey-Hydrate-iOS.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -307,11 +291,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78E239CF2768F2FD0058EE36 /* Build configuration list for PBXNativeTarget "Hey-Hydrate-iOS" */;
 			buildPhases = (
-				43A4C0057AC95B708153CC7E /* [CP] Check Pods Manifest.lock */,
 				78E239A22768F2FD0058EE36 /* Sources */,
 				78E239A32768F2FD0058EE36 /* Frameworks */,
 				78E239A42768F2FD0058EE36 /* Resources */,
-				78180E1D276A01F70093CCBF /* ShellScript */,
 				34B682732859C36A00B772DF /* Embed Foundation Extensions */,
 			);
 			buildRules = (
@@ -410,48 +392,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		43A4C0057AC95B708153CC7E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Hey-Hydrate-iOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		78180E1D276A01F70093CCBF /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		34B682772859FBF500B772DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -526,7 +466,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate.PercentageDrankWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -555,7 +495,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate.PercentageDrankWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -684,7 +624,6 @@
 		};
 		78E239D02768F2FD0058EE36 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FB46789D55885B24A9FB538 /* Pods-Hey-Hydrate-iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -712,7 +651,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate;
 				PRODUCT_NAME = "Hey! Hydrate!";
 				SDKROOT = iphoneos;
@@ -727,7 +666,6 @@
 		};
 		78E239D12768F2FD0058EE36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F05F5DAFC76B148910D4560 /* Pods-Hey-Hydrate-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -755,7 +693,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate;
 				PRODUCT_NAME = "Hey! Hydrate!";
 				SDKROOT = iphoneos;
