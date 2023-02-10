@@ -111,9 +111,7 @@
 		34B6828A2859FC6F00B772DF /* PercentageDrankWidgetContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageDrankWidgetContent.swift; sourceTree = "<group>"; };
 		34B6828F285A029500B772DF /* FileManager+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Ext.swift"; sourceTree = "<group>"; };
 		34C5B4BD28536BAB003C3FF6 /* HHTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHTabView.swift; sourceTree = "<group>"; };
-		3FB46789D55885B24A9FB538 /* Pods-Hey-Hydrate-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey-Hydrate-iOS.debug.xcconfig"; path = "Target Support Files/Pods-Hey-Hydrate-iOS/Pods-Hey-Hydrate-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		609EB0EAB846E7893728FC7A /* Pods_Hey_Hydrate_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hey_Hydrate_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F05F5DAFC76B148910D4560 /* Pods-Hey-Hydrate-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hey-Hydrate-iOS.release.xcconfig"; path = "Target Support Files/Pods-Hey-Hydrate-iOS/Pods-Hey-Hydrate-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		788425862769ECC20085660E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		78CC90E3276A387B0033CC9C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		78CC90E7276A40010033CC9C /* Hey! Hydrate! (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hey! Hydrate! (iOS).entitlements"; sourceTree = "<group>"; };
@@ -316,7 +314,6 @@
 				3429A53C299681980007A7DD /* heyhydrate Watch AppTests */,
 				3429A546299681990007A7DD /* heyhydrate Watch AppUITests */,
 				78E239A72768F2FD0058EE36 /* Products */,
-				7939FE2A29B1D55185942758 /* Pods */,
 				01733FDD023C499A94818DCB /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -371,15 +368,6 @@
 				78E239DF2768F4200058EE36 /* AddWaterDrankView.swift */,
 			);
 			path = AddWaterDrank;
-			sourceTree = "<group>";
-		};
-		7939FE2A29B1D55185942758 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3FB46789D55885B24A9FB538 /* Pods-Hey-Hydrate-iOS.debug.xcconfig */,
-				6F05F5DAFC76B148910D4560 /* Pods-Hey-Hydrate-iOS.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1073,7 +1061,6 @@
 		};
 		78E239D02768F2FD0058EE36 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FB46789D55885B24A9FB538 /* Pods-Hey-Hydrate-iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1116,7 +1103,6 @@
 		};
 		78E239D12768F2FD0058EE36 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F05F5DAFC76B148910D4560 /* Pods-Hey-Hydrate-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
