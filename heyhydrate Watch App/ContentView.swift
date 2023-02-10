@@ -16,6 +16,8 @@ struct ContentView: View {
     @State private var units: UnitType = .ml
 
     @EnvironmentObject var hkHelper: HealthKitHelper
+
+    @State private var crownRotation = 0.1
     
     var body: some View {
         VStack(spacing: 8) {
@@ -39,6 +41,25 @@ struct ContentView: View {
             })
         }
         .padding()
+        .focusable(true)
+        .digitalCrownRotation(
+            detent: $crownRotation,
+            from: .infinity,
+            through: .infinity,
+            by: 1,
+            sensitivity: .medium,
+            isHapticFeedbackEnabled: true
+        ) { crownEvent in
+            if 0 < crownEvent.velocity {
+                waterAmount += 10
+            } else {
+                if waterAmount > 20 {
+                    waterAmount -= 10
+                } else {
+                    waterAmount = 10
+                }
+            }
+        }
         .onAppear {
             hkHelper.getWater { (result) in
                 DispatchQueue.main.async {
