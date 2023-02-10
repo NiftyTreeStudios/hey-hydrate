@@ -52,7 +52,7 @@ struct ContentView: View {
         ) { crownEvent in
             if 0 < crownEvent.velocity {
                 waterAmount += 10
-            } else {
+            } else if 0 > crownEvent.velocity {
                 if waterAmount > 20 {
                     waterAmount -= 10
                 } else {
