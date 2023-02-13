@@ -86,12 +86,14 @@ final class HealthKitHelper: ObservableObject {
             if error != nil {
                 self.alertItem = AlertContext.unableToGetHealthRecords
             }
-            result!.enumerateStatistics(from: startOfDay, to: now) { statistics, _ in
-                if let sum = statistics.sumQuantity() {
-                    resultCount = sum.doubleValue(for: HKUnit.liter())
-                }
-                DispatchQueue.main.async {
-                    completion(Int(resultCount * 1000))
+            if let result {
+                result.enumerateStatistics(from: startOfDay, to: now) { statistics, _ in
+                    if let sum = statistics.sumQuantity() {
+                        resultCount = sum.doubleValue(for: HKUnit.liter())
+                    }
+                    DispatchQueue.main.async {
+                        completion(Int(resultCount * 1000))
+                    }
                 }
             }
         }
