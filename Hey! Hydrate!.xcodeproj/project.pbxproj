@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3419053D2996A7C000B6E050 /* Hey! Hydrate!.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3429A52A299681970007A7DD /* Hey! Hydrate!.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3429A52D299681970007A7DD /* HeyHydrateWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3429A52C299681970007A7DD /* HeyHydrateWatchApp.swift */; };
 		3429A52F299681970007A7DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3429A52E299681970007A7DD /* ContentView.swift */; };
 		3429A534299681980007A7DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3429A533299681980007A7DD /* Preview Assets.xcassets */; };
@@ -44,6 +45,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3419053E2996A7C000B6E050 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78E2399A2768F2FB0058EE36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3429A529299681970007A7DD;
+			remoteInfo = "Hey-Hydrate-Watch-App";
+		};
 		3429A53A299681980007A7DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78E2399A2768F2FB0058EE36 /* Project object */;
@@ -75,6 +83,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		341905402996A7C000B6E050 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				3419053D2996A7C000B6E050 /* Hey! Hydrate!.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		34B682732859C36A00B772DF /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,7 +207,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3429A52B299681970007A7DD /* heyhydrate Watch App */ = {
+		3429A52B299681970007A7DD /* Watch */ = {
 			isa = PBXGroup;
 			children = (
 				3446E6F329968DB500C065EB /* heyhydrate Watch App.entitlements */,
@@ -197,7 +216,7 @@
 				3429A52E299681970007A7DD /* ContentView.swift */,
 				3429A532299681980007A7DD /* Preview Content */,
 			);
-			path = "heyhydrate Watch App";
+			path = Watch;
 			sourceTree = "<group>";
 		};
 		3429A532299681980007A7DD /* Preview Content */ = {
@@ -306,7 +325,7 @@
 				78E2399E2768F2FC0058EE36 /* Shared */,
 				78E239B62768F2FD0058EE36 /* Tests iOS */,
 				34B6827E2859FBF500B772DF /* PercentageDrankWidget */,
-				3429A52B299681970007A7DD /* heyhydrate Watch App */,
+				3429A52B299681970007A7DD /* Watch */,
 				3429A53C299681980007A7DD /* heyhydrate Watch AppTests */,
 				3429A546299681990007A7DD /* heyhydrate Watch AppUITests */,
 				78E239A72768F2FD0058EE36 /* Products */,
@@ -369,9 +388,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3429A529299681970007A7DD /* heyhydrate Watch App */ = {
+		3429A529299681970007A7DD /* Hey-Hydrate-Watch-App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3429A551299681990007A7DD /* Build configuration list for PBXNativeTarget "heyhydrate Watch App" */;
+			buildConfigurationList = 3429A551299681990007A7DD /* Build configuration list for PBXNativeTarget "Hey-Hydrate-Watch-App" */;
 			buildPhases = (
 				3429A526299681970007A7DD /* Sources */,
 				3429A527299681970007A7DD /* Frameworks */,
@@ -381,7 +400,7 @@
 			);
 			dependencies = (
 			);
-			name = "heyhydrate Watch App";
+			name = "Hey-Hydrate-Watch-App";
 			productName = "heyhydrate Watch App";
 			productReference = 3429A52A299681970007A7DD /* Hey! Hydrate!.app */;
 			productType = "com.apple.product-type.application";
@@ -447,11 +466,13 @@
 				78E239A32768F2FD0058EE36 /* Frameworks */,
 				78E239A42768F2FD0058EE36 /* Resources */,
 				34B682732859C36A00B772DF /* Embed Foundation Extensions */,
+				341905402996A7C000B6E050 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				34B682852859FBF700B772DF /* PBXTargetDependency */,
+				3419053F2996A7C000B6E050 /* PBXTargetDependency */,
 			);
 			name = "Hey-Hydrate-iOS";
 			productName = "Hey! Hydrate! (iOS)";
@@ -525,7 +546,7 @@
 				78E239A52768F2FD0058EE36 /* Hey-Hydrate-iOS */,
 				78E239B22768F2FD0058EE36 /* Tests iOS */,
 				34B6827A2859FBF500B772DF /* PercentageDrankWidgetExtension */,
-				3429A529299681970007A7DD /* heyhydrate Watch App */,
+				3429A529299681970007A7DD /* Hey-Hydrate-Watch-App */,
 				3429A538299681980007A7DD /* heyhydrate Watch AppTests */,
 				3429A542299681980007A7DD /* heyhydrate Watch AppUITests */,
 			);
@@ -653,14 +674,19 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3419053F2996A7C000B6E050 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3429A529299681970007A7DD /* Hey-Hydrate-Watch-App */;
+			targetProxy = 3419053E2996A7C000B6E050 /* PBXContainerItemProxy */;
+		};
 		3429A53B299681980007A7DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3429A529299681970007A7DD /* heyhydrate Watch App */;
+			target = 3429A529299681970007A7DD /* Hey-Hydrate-Watch-App */;
 			targetProxy = 3429A53A299681980007A7DD /* PBXContainerItemProxy */;
 		};
 		3429A545299681980007A7DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3429A529299681970007A7DD /* heyhydrate Watch App */;
+			target = 3429A529299681970007A7DD /* Hey-Hydrate-Watch-App */;
 			targetProxy = 3429A544299681980007A7DD /* PBXContainerItemProxy */;
 		};
 		34B682852859FBF700B772DF /* PBXTargetDependency */ = {
@@ -682,26 +708,27 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = "heyhydrate Watch App/heyhydrate Watch App.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Watch/heyhydrate Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"heyhydrate Watch App/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"Watch/Preview Content\"";
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "heyhydrate-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Hey! Hydrate! Watch";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.niftytreestudios.heyhydrate;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = .com.niftytreestudios.heyhydrate.watch;
+				MARKETING_VERSION = 3.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate.watchkitapp;
 				PRODUCT_NAME = "Hey! Hydrate!";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -718,26 +745,27 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_ENTITLEMENTS = "heyhydrate Watch App/heyhydrate Watch App.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Watch/heyhydrate Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"heyhydrate Watch App/Preview Content\"";
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"Watch/Preview Content\"";
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "heyhydrate-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Hey! Hydrate! Watch";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.niftytreestudios.heyhydrate;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = .com.niftytreestudios.heyhydrate.watch;
+				MARKETING_VERSION = 3.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate.watchkitapp;
 				PRODUCT_NAME = "Hey! Hydrate!";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -844,7 +872,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PercentageDrankWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PercentageDrankWidget/Info.plist;
@@ -855,7 +883,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate.PercentageDrankWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -873,7 +901,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PercentageDrankWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PercentageDrankWidget/Info.plist;
@@ -884,7 +912,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate.PercentageDrankWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1019,7 +1047,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hey! Hydrate! (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1061,7 +1089,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hey! Hydrate! (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1140,7 +1168,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3429A551299681990007A7DD /* Build configuration list for PBXNativeTarget "heyhydrate Watch App" */ = {
+		3429A551299681990007A7DD /* Build configuration list for PBXNativeTarget "Hey-Hydrate-Watch-App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3429A54B299681990007A7DD /* Debug */,
