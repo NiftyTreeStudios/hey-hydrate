@@ -710,13 +710,13 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_ENTITLEMENTS = "Watch/heyhydrate Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Watch/Preview Content\"";
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "heyhydrate-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Hey! Hydrate! Watch";
+				INFOPLIST_KEY_CFBundleDisplayName = "Hey! Hydrate!";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
@@ -727,7 +727,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate.watchkitapp;
 				PRODUCT_NAME = "Hey! Hydrate!";
 				SDKROOT = watchos;
@@ -747,13 +747,13 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_ENTITLEMENTS = "Watch/heyhydrate Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Watch/Preview Content\"";
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "heyhydrate-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Hey! Hydrate! Watch";
+				INFOPLIST_KEY_CFBundleDisplayName = "Hey! Hydrate!";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
@@ -764,7 +764,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate.watchkitapp;
 				PRODUCT_NAME = "Hey! Hydrate!";
 				SDKROOT = watchos;
@@ -872,7 +872,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PercentageDrankWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PercentageDrankWidget/Info.plist;
@@ -883,7 +883,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate.PercentageDrankWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -901,7 +901,7 @@
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_ENTITLEMENTS = PercentageDrankWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PercentageDrankWidget/Info.plist;
@@ -912,7 +912,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate.PercentageDrankWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1047,7 +1047,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hey! Hydrate! (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1068,7 +1068,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate;
 				PRODUCT_NAME = "Hey! Hydrate!";
 				SDKROOT = iphoneos;
@@ -1089,7 +1089,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Hey! Hydrate! (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1110,7 +1110,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.0;
+				MARKETING_VERSION = 3.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.niftytreestudios.heyhydrate;
 				PRODUCT_NAME = "Hey! Hydrate!";
 				SDKROOT = iphoneos;
