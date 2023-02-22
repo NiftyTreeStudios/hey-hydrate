@@ -47,7 +47,7 @@ struct ContentView: View {
             from: .infinity,
             through: .infinity,
             by: 1,
-            sensitivity: .medium,
+            sensitivity: .low,
             isContinuous: true,
             isHapticFeedbackEnabled: true
         ) { crownEvent in
