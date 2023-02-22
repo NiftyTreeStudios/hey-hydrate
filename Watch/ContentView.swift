@@ -83,10 +83,10 @@ struct WaterIndicatorView: View {
     var body: some View {
         ZStack {
             Circle()
-                .stroke(.blue.opacity(0.3), lineWidth: 5)
+                .stroke(.blue.opacity(0.3), lineWidth: 10)
             Circle()
                 .trim(from: 0, to: progress)
-                .stroke(.blue, lineWidth: 5)
+                .stroke(.blue, lineWidth: 10)
                 .rotationEffect(.degrees(90))
             Text("\(waterTotal)")
         }
