@@ -716,7 +716,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "heyhydrate-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Hey! Hydrate! Watch";
+				INFOPLIST_KEY_CFBundleDisplayName = "Hey! Hydrate!";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
@@ -753,7 +753,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "heyhydrate-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Hey! Hydrate! Watch";
+				INFOPLIST_KEY_CFBundleDisplayName = "Hey! Hydrate!";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
