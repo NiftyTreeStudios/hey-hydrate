@@ -11,13 +11,11 @@ import SwiftUI
 struct ContentView: View {
     @State private var progress: Double = 0
     @State private var goal: Int = 3000
-    @State private var waterAmount: Int = 250
+    @State private var waterAmount: Double = 250
     @State private var waterTotal: Int = 0
     @State private var units: UnitType = .ml
 
     @EnvironmentObject var hkHelper: HealthKitHelper
-
-    @State private var crownRotation = 0.1
     
     var body: some View {
         VStack(spacing: 8) {
@@ -29,38 +27,29 @@ struct ContentView: View {
                         self.waterTotal = result
                     }
                 }
-                waterTotal += waterAmount
+                waterTotal += Int(waterAmount)
                 if progress < 1 {
                     progress = Double(waterTotal) / Double(goal)
                 } else {
                     progress = 1
                 }
-                hkHelper.updateWaterAmount(waterAmount: waterAmount)
+                hkHelper.updateWaterAmount(waterAmount: roundedDoubleToNearestTen(waterAmount))
             }, label: {
-                Text("Drink \(waterAmount) \(units.rawValue)")
+                Text(
+                    "Drink \(roundedDoubleToNearestTen(waterAmount)) \(units.rawValue)"
+                )
             })
         }
         .padding()
         .focusable(true)
         .digitalCrownRotation(
-            detent: $crownRotation,
-            from: .infinity,
-            through: .infinity,
+            $waterAmount,
+            from: 0,
+            through: 4000,
             by: 1,
-            sensitivity: .low,
+            sensitivity: .high,
             isContinuous: true,
-            isHapticFeedbackEnabled: true
-        ) { crownEvent in
-            if 0 < crownEvent.velocity {
-                waterAmount += 10
-            } else if 0 > crownEvent.velocity {
-                if waterAmount > 20 {
-                    waterAmount -= 10
-                } else {
-                    waterAmount = 10
-                }
-            }
-        }
+            isHapticFeedbackEnabled: true)
         .onAppear {
             hkHelper.getWater { (result) in
                 DispatchQueue.main.async {
@@ -74,6 +63,12 @@ struct ContentView: View {
             }
         }
     }
+}
+
+func roundedDoubleToNearestTen(_ double: Double) -> Int {
+    let roundedInt = round(double)
+    let roundedToTen = round(roundedInt / 10) * 10
+    return Int(roundedToTen)
 }
 
 struct WaterIndicatorView: View {
