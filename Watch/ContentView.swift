@@ -65,12 +65,6 @@ struct ContentView: View {
     }
 }
 
-func roundedDoubleToNearestTen(_ double: Double) -> Int {
-    let roundedInt = round(double)
-    let roundedToTen = round(roundedInt / 10) * 10
-    return Int(roundedToTen)
-}
-
 struct WaterIndicatorView: View {
     let progress: Double
     @Binding var waterTotal: Int

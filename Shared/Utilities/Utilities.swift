@@ -18,3 +18,16 @@ import Foundation
 func calculatePercentageDrank(waterDrank: Int, goal: Int) -> Double {
     return Double(waterDrank) / Double(goal)
 }
+
+/**
+ Rounds the given double to the nearest 10.
+
+ - Parameter double: the `Double` to be rounded.
+
+ - Returns: an `Int` that is rounded to the nearest 10.
+ */
+func roundedDoubleToNearestTen(_ double: Double) -> Int {
+    let roundedInt = round(double)
+    let roundedToTen = round(roundedInt / 10) * 10
+    return Int(roundedToTen)
+}
