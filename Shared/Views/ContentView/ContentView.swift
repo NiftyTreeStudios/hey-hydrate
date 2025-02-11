@@ -26,11 +26,22 @@ struct ContentView: View {
                         }
                     }
                 }
-            Button {
-                hkHelper.setupHealthKit()
-            } label: {
-                Image(systemName: "arrow.clockwise")
-            }.position(x: 30, y: 30)
+            VStack {
+                HStack {
+                    Button {
+                        hkHelper.setupHealthKit()
+                    } label: {
+                        Image(systemName: "arrow.clockwise")
+                    }
+                    Spacer()
+                    Button {
+                        // TODO: Actual functionality for adding previous drinks
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+                Spacer()
+            }.padding(30)
         }
         .onChange(of: scenePhase, perform: { _ in
             hkHelper.setupHealthKit()
