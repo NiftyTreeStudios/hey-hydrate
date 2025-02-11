@@ -129,6 +129,7 @@
 		34B6828A2859FC6F00B772DF /* PercentageDrankWidgetContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentageDrankWidgetContent.swift; sourceTree = "<group>"; };
 		34B6828F285A029500B772DF /* FileManager+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Ext.swift"; sourceTree = "<group>"; };
 		34C5B4BD28536BAB003C3FF6 /* HHTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HHTabView.swift; sourceTree = "<group>"; };
+		785CA7022D5B820800E38927 /* Hey-Hydrate-iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Hey-Hydrate-iOS-Info.plist"; sourceTree = "<group>"; };
 		788425862769ECC20085660E /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		78CC90E3276A387B0033CC9C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		78CC90E7276A40010033CC9C /* Hey! Hydrate! (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Hey! Hydrate! (iOS).entitlements"; sourceTree = "<group>"; };
@@ -320,6 +321,7 @@
 		78E239992768F2FB0058EE36 = {
 			isa = PBXGroup;
 			children = (
+				785CA7022D5B820800E38927 /* Hey-Hydrate-iOS-Info.plist */,
 				3466964129097FEF00F7E74C /* PercentageDrankWidgetExtension.entitlements */,
 				78CC90E7276A40010033CC9C /* Hey! Hydrate! (iOS).entitlements */,
 				78E2399E2768F2FC0058EE36 /* Shared */,
@@ -1051,7 +1053,7 @@
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = "Hey-Hydrate-iOS-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Hey! Hydrate!";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
@@ -1093,7 +1095,7 @@
 				DEVELOPMENT_TEAM = LBHT4Q3RSF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "";
+				INFOPLIST_FILE = "Hey-Hydrate-iOS-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Hey! Hydrate!";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Hey! Hydrate! Need permission to HealthKit to be able to sync the water you've drank.";
