@@ -26,14 +26,6 @@ struct WaterDrankIndicatorView: View {
     }
 }
 
-extension Int {
-    func roundToTens() -> Int {
-        let original = Double(self)
-        let rounded = (original / 10).rounded() * 10
-        return Int(rounded)
-    }
-}
-
 struct WaterDrankBackground: View {
     @Binding var percentageDrank: Double
     @State private var waveOffset = Angle(degrees: 0)
