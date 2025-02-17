@@ -113,15 +113,14 @@ final class HealthKitHelper: ObservableObject {
         healthStore.execute(query)
     }
 
-    func updateWaterAmount(waterAmount: Int) {
-        let now = Date()
-        let startOfDay = Calendar.current.startOfDay(for: now)
+    func updateWaterAmount(waterAmount: Int, for date: Date = Date()) {
+        let startOfDay = Calendar.current.startOfDay(for: date)
         let waterQuantityType = HKQuantityType.quantityType(forIdentifier: .dietaryWater)!
         let waterAmountToSave = HKQuantitySample(
             type: waterQuantityType,
             quantity: HKQuantity(unit: .liter(), doubleValue: Double(waterAmount) / 1000),
             start: startOfDay,
-            end: now
+            end: date
         )
         healthStore.save(waterAmountToSave) { success, error in
             if error != nil {
