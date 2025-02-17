@@ -18,3 +18,16 @@ import Foundation
 func calculatePercentageDrank(waterDrank: Int, goal: Int) -> Double {
     return Double(waterDrank) / Double(goal)
 }
+
+extension Int {
+    /**
+     Rounds the `Int` to the closest 10.
+
+     - Returns: `Int` rounded to the closest 10.
+     */
+    func roundToTens() -> Int {
+        let original = Double(self)
+        let rounded = (original / 10).rounded() * 10
+        return Int(rounded)
+    }
+}
