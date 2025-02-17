@@ -16,13 +16,21 @@ struct WaterDrankIndicatorView: View {
 
     var body: some View {
         ZStack {
-            Text("\(waterDrank)")
+            Text("\(waterDrank.roundToTens())")
                 .font(.title)
         }
         .background(WaterDrankBackground(percentageDrank: $percentageDrank))
-        .onChange(of: waterDrank) { _ in
-            percentageDrank = calculatePercentageDrank(waterDrank: waterDrank, goal: goal)
-        }
+        .onChange(of: waterDrank, { oldValue, newValue in
+            percentageDrank = calculatePercentageDrank(waterDrank: newValue, goal: goal)
+        })
+    }
+}
+
+extension Int {
+    func roundToTens() -> Int {
+        let original = Double(self)
+        let rounded = (original / 10).rounded() * 10
+        return Int(rounded)
     }
 }
 
