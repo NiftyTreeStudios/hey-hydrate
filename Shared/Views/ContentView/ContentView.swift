@@ -12,6 +12,10 @@ struct ContentView: View {
     @EnvironmentObject var hkHelper: HealthKitHelper
     @Environment(\.scenePhase) var scenePhase
 
+    @State private var addWaterAlertIsPresented = false
+    @State private var customWaterAmount: String = ""
+    @State private var customDate: Date = Date()
+
     var body: some View {
         ZStack {
             HydrationView()
@@ -35,7 +39,7 @@ struct ContentView: View {
                     }
                     Spacer()
                     Button {
-                        // TODO: Actual functionality for adding previous drinks
+                        addWaterAlertIsPresented = true
                     } label: {
                         Image(systemName: "plus")
                     }
@@ -43,12 +47,34 @@ struct ContentView: View {
                 Spacer()
             }.padding(30)
         }
-        .onChange(of: scenePhase, perform: { _ in
+        .onChange(of: scenePhase, { _, _ in
             hkHelper.setupHealthKit()
         })
         .alert(item: $hkHelper.alertItem, content: { alertItem in
             Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
         })
+        .sheet(isPresented: $addWaterAlertIsPresented) {
+            ScrollView {
+                Text("Add previously drunk water")
+                    .font(.headline)
+                HStack {
+                    Text("Water amount (ml)")
+                    Spacer()
+                    TextField("200", text: $customWaterAmount)
+                        .keyboardType(.numberPad)
+                        .multilineTextAlignment(.trailing)
+                }.padding(10)
+                DatePicker("For date", selection: $customDate, displayedComponents: .date)
+                    .datePickerStyle(GraphicalDatePickerStyle())
+                Button("Add water") {
+                    hkHelper.updateWaterAmount(waterAmount: Int(customWaterAmount) ?? 0, for: customDate)
+                    hkHelper.setupHealthKit()
+                    addWaterAlertIsPresented = false
+                }
+            }
+            .padding()
+            .presentationDetents([.fraction(0.75)])
+        }
     }
 }
 
@@ -74,7 +100,7 @@ struct HydrationView: View {
                 )
             }.position(x: geometry.size.width / 2, y: geometry.size.height / 2 + 50)
         }
-        .onChange(of: hkHelper.waterAmount, perform: { _ in
+        .onChange(of: hkHelper.waterAmount, { _, _ in
             viewModel.percentageDrank = calculatePercentageDrank(waterDrank: hkHelper.waterAmount, goal: viewModel.goal)
         })
     }
